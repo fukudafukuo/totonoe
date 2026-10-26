@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  公開URLの差し替え:
+  canonical / og:url / og:image / twitter:image / JSON-LD の url は絶対URLが必要なため、
+  すべて下の仮URLで書いてある。公開先が決まったら次のコマンドで一括置換する。
+    sed -i '' 's#https://fukudafukuo.github.io/totonoe/#https://新しいURL/#g' index.html
+  それ以外のリンクと画像はすべて相対パス。
+-->
+<title>Totonoe Skin Retouch | Premiere Pro・After Effects用 肌補正プラグイン</title>
+<meta name="description" content="Premiere ProとAfter Effectsの両方で使える肌補正プラグイン。肌の色を自動で検出し、輪郭と質感を残したまま、肌の粗さ・赤み・テカリを整えます。買い切り、無料体験版あり。">
+<link rel="canonical" href="https://fukudafukuo.github.io/totonoe/">
+<meta name="theme-color" content="#0e0c1d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Totonoe Skin Retouch">
+<meta property="og:title" content="Totonoe Skin Retouch | Premiere Pro・After Effects用 肌補正プラグイン">
+<meta property="og:description" content="エフェクトを当てた瞬間に、輪郭と質感を残したまま肌が整う。Premiere ProとAfter Effectsの両方で使える買い切りプラグイン。無料体験版あり。">
+<meta property="og:url" content="https://fukudafukuo.github.io/totonoe/">
+<meta property="og:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Totonoe Skin Retouch | Premiere Pro・After Effects用 肌補正プラグイン">
+<meta name="twitter:description" content="エフェクトを当てた瞬間に、輪郭と質感を残したまま肌が整う。買い切り、無料体験版あり。">
+<meta name="twitter:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+
+<link rel="preload" as="image" href="assets/hero-after.webp" type="image/webp">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- GA4: 測定IDを受け取ったらここに入れる -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Totonoe Skin Retouch",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "macOS 13 or later, Windows 10/11 (64-bit)",
+  "description": "Premiere ProとAfter Effects用の肌補正プラグイン。肌の色を自動で検出し、輪郭と質感を残したまま肌の粗さ・赤み・テカリを整える。",
+  "url": "https://fukudafukuo.github.io/totonoe/",
+  "image": "https://fukudafukuo.github.io/totonoe/assets/ogp.jpg",
+  "inLanguage": "ja",
+  "offers": {
+    "@type": "Offer",
+    "price": 9800,
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/InStock",
+    "url": "https://totonoe-plugin.booth.pm/items/8663073"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<div class="banner" id="banner">Windows版の無料ベータを公開中です（2026年11月15日まで）　<a href="#windows">Windows版について</a></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Totonoe<small>Skin Retouch</small></a>
+    <nav class="nav" aria-label="ページ内メニュー">
+      <a href="#steps">使い方</a>
+      <a href="#quality">仕上がり</a>
+      <a href="#params">機能</a>
+      <a href="#specs">動作環境</a>
+      <a href="#pricing">価格</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://totonoe-plugin.booth.pm/items/8892910" rel="noopener">無料体験版</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ヒーロー -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Premiere Pro / After Effects 用 肌補正プラグイン</p>
+        <h1>当てた瞬間に、<br class="br-sp">肌が自然に整う</h1>
+        <p class="lead">肌の色を自動で検出し、輪郭と質感（毛穴・肌理）を残したまま、肌の粗さ・赤み・テカリを整えます。エフェクトを適用すると、何も設定しなくても標準の状態で結果が出ます。</p>
+        <div class="price-line">
+          <span class="label">買い切り</span>
+          <span class="js-price"><span class="price-now">&yen;9,800</span></span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://totonoe-plugin.booth.pm/items/8892910" rel="noopener">無料体験版をダウンロード</a>
+          <a class="btn btn-ghost" href="https://totonoe-plugin.booth.pm/items/8663073" rel="noopener">製品版を購入</a>
+        </div>
+        <p class="price-note">サブスクリプションではなく、一度の購入で使い続けられます。体験版は製品版と同じ全機能を試せます。映像に薄い斜めの縞（ウォーターマーク）が入ります。</p>
+      </div>
+
+      <div class="cmp-wrap">
+        <div class="cmp" role="group" aria-label="肌補正のBefore/After比較">
+          <img class="img-after" src="assets/hero-after.webp" width="960" height="540" alt="肌補正後のフレーム（After）" fetchpriority="high">
+          <img class="img-before" src="assets/hero-before.webp" width="960" height="540" alt="肌補正前のフレーム（Before）">
+          <span class="cmp-tag t-before">BEFORE</span>
+          <span class="cmp-tag t-after">AFTER</span>
+          <div class="cmp-handle" role="slider" tabindex="0" aria-label="BeforeとAfterの境界位置" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="左側がBefore、右側がAfter。境界は左から50%の位置"><span class="cmp-knob" aria-hidden="true">&harr;</span></div>
+        </div>
+        <p class="cap">左右にドラッグすると、同じ写真のBeforeとAfterを比べられます。キーボードでは矢印キーで動かせます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- デモ動画 -->
+<section id="demo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">DEMO</p>
+      <h2>デモ動画（30秒）</h2>
+      <p>動画の読み込みは、再生ボタンを押したときに始まります。</p>
+    </div>
+    <a class="video" href="https://vimeo.com/1213783495" data-vimeo="1213783495" rel="noopener" aria-label="デモ動画を再生する（Vimeo、30秒）">
+      <img src="assets/hero-after.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+      <span class="play" aria-hidden="true"></span>
+      <span class="vt">Totonoe Skin Retouch デモ<small>Vimeo ／ 30秒</small></span>
+    </a>
+  </div>
+</section>
+
+<!-- 初期設定 -->
+<section class="alt" id="default">
+  <div class="wrap">
+    <div class="split">
+      <div class="txt">
+        <p class="sec-head kicker" style="margin:0 0 8px;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.08em">FIRST IMPRESSION</p>
+        <h2>初期設定のまま、肌の色ムラを整える</h2>
+        <p>Auto Detectと標準プリセットが最初から有効になっています。クリップに適用した時点で、肌の部分だけに処理がかかります。パラメータを触るのは、仕上がりを好みに寄せたいときだけです。</p>
+        <ul class="checks">
+          <li>肌の色を自動で検出し、検出した範囲にだけ処理を適用</li>
+          <li>エッジ保存型の平滑化とテクスチャ復元で、塗りつぶしたような見た目を避ける</li>
+          <li>MV、インタビュー、ブライダルの編集現場で、作者が実際に使いながら開発</li>
+        </ul>
+      </div>
+      <figure>
+        <a class="zoom" href="assets/default-before-after.webp" target="_blank" rel="noopener"><img src="assets/default-before-after.webp" width="1024" height="576" alt="初期設定（Standard）での処理前と処理後の比較" loading="lazy" decoding="async"></a>
+        <figcaption class="cap">初期設定（Standard）での処理結果。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 使い方 -->
+<section id="steps">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">HOW TO USE</p>
+      <h2>使い方は3ステップ</h2>
+      <p>Premiere ProでもAfter Effectsでも、手順は同じです。</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>エフェクトを適用する</h3>
+        <p>エフェクト「Skin Retouch」をクリップに適用します。</p>
+      </li>
+      <li>
+        <h3>Presetを選ぶ</h3>
+        <p>Natural、Standard、Strongの3種類から選びます。迷ったらStandardで始められます。</p>
+      </li>
+      <li>
+        <h3>Amountで強さを調整する</h3>
+        <p>Amountのスライダーで、処理の強さを好みの位置に合わせます。</p>
+      </li>
+    </ol>
+    <figure class="shot">
+      <a class="zoom" href="assets/premiere-trial.webp" target="_blank" rel="noopener"><img src="assets/premiere-trial.webp" width="1600" height="574" alt="Premiere Proのエフェクトコントロールパネルに並ぶSkin Retouchのパラメータと、プログラムモニターに表示された体験版の斜めの縞" loading="lazy" decoding="async"></a>
+      <figcaption class="cap">Premiere Pro上の体験版。左がエフェクトコントロールで、Preset、Auto Detect、Amount、Compareなどが並びます。右のモニターに見える薄い斜めの縞が体験版のウォーターマークです。エフェクト下部の「Buy on BOOTH」ボタンから、製品版のページを開けます。</figcaption>
+    </figure>
+    <p style="margin-top:28px"><a href="https://note.com/studiomarimo/n/n4d90fd2467b5" rel="noopener">使い方ガイド（note）で、全パラメータの解説を読む</a></p>
+  </div>
+</section>
+
+<!-- 特長 -->
+<section class="alt" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">FEATURES</p>
+      <h2>特長</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3>肌の部分だけを処理する</h3>
+        <p>肌の色を自動で検出し、検出した範囲にだけ処理を適用します。Show Maskで検出範囲を確認できます。眉やまつげは保護される仕様で、輪郭は元の映像のまま残ります。</p>
+      </div>
+      <div class="card">
+        <h3>Premiere ProとAfter Effectsの両方で使える</h3>
+        <p>1つのプラグインを、どちらのホストでも使えます。Premiere ProとAfter Effectsの2025以降に対応しています。</p>
+      </div>
+      <div class="card">
+        <h3>買い切りで使える</h3>
+        <p>月額や年額の費用はかかりません。同じメジャーバージョンの中の不具合修正と互換性アップデートは、追加料金なしで受け取れます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 仕上がり -->
+<section id="quality">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">QUALITY</p>
+      <h2>細部の比較</h2>
+      <p>各画像の上部に、縮小表示か、元の解像度からの等倍切り出しかを記載しています。画像は処理前と処理後を並べたもので、プラグインの出力をそのまま使っています。画像をタップまたはクリックすると、元のサイズで開きます。</p>
+    </div>
+
+    <div data-tabs>
+      <figure class="fig" id="fig-face" data-tab-label="顔全体">
+        <a class="zoom" href="assets/detail-face.webp" target="_blank" rel="noopener"><img src="assets/detail-face.webp" width="1600" height="900" alt="初期設定（Standard）での処理前と処理後の比較。顔全体" loading="lazy" decoding="async"></a>
+        <figcaption class="cap">初期設定（Standard）での処理結果。</figcaption>
+      </figure>
+      <figure class="fig" id="fig-pores" data-tab-label="Natural（等倍）">
+        <a class="zoom" href="assets/detail-pores.webp" target="_blank" rel="noopener"><img src="assets/detail-pores.webp" width="1600" height="900" alt="Naturalプリセットでの処理前と処理後の比較。等倍の切り出し" loading="lazy" decoding="async"></a>
+        <figcaption class="cap">Naturalプリセットでの処理結果。</figcaption>
+      </figure>
+      <figure class="fig" id="fig-edges" data-tab-label="眼鏡と眉の輪郭">
+        <a class="zoom" href="assets/detail-edges.webp" target="_blank" rel="noopener"><img src="assets/detail-edges.webp" width="1600" height="900" alt="初期設定（Standard）での処理前と処理後の比較。眼鏡のフチと眉の輪郭" loading="lazy" decoding="async"></a>
+        <figcaption class="cap">初期設定（Standard）での処理結果。</figcaption>
+      </figure>
+      <figure class="fig" id="fig-zoom" data-tab-label="Blemish / Redness">
+        <a class="zoom" href="assets/detail-zoom.webp" target="_blank" rel="noopener"><img src="assets/detail-zoom.webp" width="1600" height="900" alt="StandardにBlemishとRednessを加えた設定での処理前と処理後の比較。等倍の切り出し" loading="lazy" decoding="async"></a>
+        <figcaption class="cap">StandardにBlemish 50、Redness -15を加えた設定での処理結果。</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub-h">ほかの素材での例</h3>
+    <p class="cap" style="margin:0 0 18px">同じフレームの処理前（BEFORE）と処理後（AFTER）です。</p>
+    <div class="fig"><img src="assets/ba-woman.webp" width="1600" height="450" alt="女性の映像の処理前と処理後" loading="lazy" decoding="async"></div>
+    <div class="fig"><img src="assets/ba-man.webp" width="1600" height="450" alt="男性の映像の処理前と処理後" loading="lazy" decoding="async"></div>
+    <div class="fig"><img src="assets/ba-elderly.webp" width="1600" height="450" alt="高齢の女性の映像の処理前と処理後" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<!-- プリセット -->
+<section class="alt" id="presets">
+  <div class="wrap">
+    <div class="split">
+      <div class="txt">
+        <p style="margin:0 0 8px;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.08em">PRESETS</p>
+        <h2>プリセットを選んで、Amountで調整する</h2>
+        <p>Presetは3段階です。段階ごとの違いは、右の比較で確認できます。</p>
+        <ul class="checks">
+          <li><strong>Natural</strong>　質感を残して軽く整える</li>
+          <li><strong>Standard</strong>　標準。初期設定</li>
+          <li><strong>Strong</strong>　しっかり整える</li>
+        </ul>
+        <p style="margin-top:16px">どのプリセットでも、Amountで全体の強さを変えられます。Compareで、原画と見比べながら調整できます。</p>
+      </div>
+      <figure>
+        <a class="zoom" href="assets/presets.webp" target="_blank" rel="noopener"><img src="assets/presets.webp" width="1024" height="621" alt="補正前、Natural、Standard、Strongの4段階の比較。下段は頬の拡大" loading="lazy" decoding="async"></a>
+        <figcaption class="cap">下段は頬の拡大です。プラグインの出力そのままの比較です。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 機能一覧 -->
+<section id="params">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">PARAMETERS</p>
+      <h2>主なパラメータ</h2>
+      <p>最初はPresetとAmountだけで使えます。細かく調整したいときに、次のパラメータを使います。</p>
+    </div>
+    <dl class="params">
+      <div><dt>Preset<span>プリセット</span></dt><dd>Natural、Standard、Strongから選びます。</dd></div>
+      <div><dt>Amount<span>強さ</span></dt><dd>処理全体の強さを調整します。</dd></div>
+      <div><dt>Compare<span>原画と比較</span></dt><dd>処理前の映像を表示して、見比べます。</dd></div>
+      <div><dt>Output Mix</dt><dd>処理後の映像と元の映像を混ぜる割合を決めます。</dd></div>
+      <div><dt>Temporal Stability<span>フレーム間の安定</span></dt><dd>肌検出がフレームごとにちらつくのを抑えます。</dd></div>
+      <div><dt>Auto Detect<span>肌の自動検出</span></dt><dd>肌の色を自動で検出します。初期設定で有効です。</dd></div>
+      <div><dt>Smoothing<span>平滑化</span></dt><dd>輪郭を保ったまま、肌の粗さを均します。</dd></div>
+      <div><dt>Texture<span>質感</span></dt><dd>平滑化で減った毛穴や肌理を、どの程度戻すかを決めます。</dd></div>
+      <div><dt>De-Shine<span>テカリ</span></dt><dd>肌のテカリを抑えます。</dd></div>
+      <div><dt>Blemish<span>小さなシミ・ニキビ</span></dt><dd>小さなシミやニキビを目立たなくします。</dd></div>
+      <div><dt>Redness / Paleness<span>血色・色白</span></dt><dd>Rednessで血色を増減し、Palenessで肌を色白または日焼けの方向に調整します。</dd></div>
+      <div><dt>Show Mask<span>検出範囲の確認</span></dt><dd>肌として検出された範囲を表示します。Hue Rangeなどの調整に使います。</dd></div>
+    </dl>
+
+    <div class="notice" style="margin-top:36px">
+      <h3>使う前に知っておいてほしいこと</h3>
+      <ul>
+        <li>直径7pxを超える大きなホクロは消せません。眉やまつげを保護するための仕様です。</li>
+        <li>LOG素材は、Rec.709に変換してから使ってください。</li>
+        <li>肌検出は肌色をもとにしているため、肌に近い色の背景も検出されることがあります。その場合は、Hue Rangeを狭めてください。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 動作環境 -->
+<section class="alt" id="specs">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">SYSTEM REQUIREMENTS</p>
+      <h2>動作環境</h2>
+    </div>
+    <div class="spec-grid">
+      <div class="spec">
+        <h3>Mac</h3>
+        <dl>
+          <div><dt>OS</dt><dd>macOS 13以降</dd></div>
+          <div><dt>CPU</dt><dd>Apple Silicon / Intel（Universal Binary）</dd></div>
+          <div><dt>GPU</dt><dd>Metal対応GPUで処理します</dd></div>
+        </dl>
+      </div>
+      <div class="spec" id="windows">
+        <h3>Windows</h3>
+        <dl>
+          <div><dt>OS</dt><dd>Windows 10 / 11（64bit）</dd></div>
+          <div><dt>処理</dt><dd>CPUのみで処理します。GPUは使わないため、Macより処理が重くなります。</dd></div>
+        </dl>
+        <div class="win-status">
+          <p data-win-beta style="margin:0">Windows版は、2026年11月15日まで無料ベータを公開中です。ベータ版は<a href="https://totonoe-plugin.booth.pm/items/9047647" rel="noopener">BOOTHのベータ配布ページ</a>から入手できます。2026年11月16日に正式版となります。</p>
+          <p data-win-official hidden style="margin:0">Windows版は正式版を公開中です。製品版の商品にWindows版が含まれているため、1回の購入でMacとWindowsの両方を使えます。Mac版をすでに購入した方は、BOOTHのライブラリから追加料金なしでWindows版をダウンロードできます。</p>
+        </div>
+      </div>
+    </div>
+    <p class="host-line"><strong>対応ホスト</strong>　Premiere Pro / After Effects 2025以降。<br><strong>ビット深度</strong>　After Effectsは8bit、16bit、32bit float。Premiere Proは8bit、32bit float。</p>
+  </div>
+</section>
+
+<!-- 価格 -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">PRICING</p>
+      <h2>価格</h2>
+    </div>
+    <div class="price-card">
+      <p style="margin:0;color:var(--accent);font-weight:700">Totonoe Skin Retouch 製品版</p>
+      <div class="price-big"><span class="js-price"><span class="price-now">&yen;9,800</span></span></div>
+      <p class="until js-until" hidden></p>
+      <p style="margin:0;color:var(--muted);font-size:14px">買い切り（サブスクリプションではありません）</p>
+      <ul class="checks">
+        <li>同じメジャーバージョンの中の不具合修正と互換性アップデートは無償</li>
+        <li>1ライセンスで1ユーザー。自分の複数のマシンにインストールできます</li>
+        <li>Premiere ProとAfter Effectsの両方で使えます</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://totonoe-plugin.booth.pm/items/8663073" rel="noopener">製品版を購入（BOOTH）</a>
+        <a class="btn btn-ghost" href="https://totonoe-plugin.booth.pm/items/8892910" rel="noopener">無料体験版を試す</a>
+      </div>
+      <p class="hint">BOOTHのダウンロード商品のため、購入後の返金はできません。購入前に、無料体験版で動作や仕上がりを確かめてください。体験版は製品版と同じ全機能を使え、映像に薄い斜めの縞が入ります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 関連記事 -->
+<section class="alt" id="articles">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">GUIDES</p>
+      <h2>導入前に読める記事</h2>
+      <p>どれも作者が書いたnoteの記事です。</p>
+    </div>
+    <div class="link-cards">
+      <a class="link-card" href="https://note.com/studiomarimo/n/n4d90fd2467b5" rel="noopener">
+        <strong>Totonoe Skin Retouch使い方ガイド</strong>
+        <span>Premiere Pro／AEの全パラメータ解説</span>
+      </a>
+      <a class="link-card" href="https://note.com/studiomarimo/n/nf96661de9817" rel="noopener">
+        <strong>肌補正プラグインを比較</strong>
+        <span>Beauty Box、Cosmo、Beauty Studio、Totonoe Skin Retouchの価格と機能</span>
+      </a>
+      <a class="link-card" href="https://note.com/studiomarimo/n/n2237eeddd976" rel="noopener">
+        <strong>Premiere Proで美肌補正する方法</strong>
+        <span>Lumetriカラーだけでやる手順と、プラグインを使う方法</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">FAQ</p>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>サブスクリプションですか</summary>
+        <div class="ans"><p>いいえ、買い切りです。月額や年額の費用はかかりません。同じメジャーバージョンの中の不具合修正と互換性アップデートは、無償で受け取れます。</p></div>
+      </details>
+      <details>
+        <summary>Windowsでも使えますか</summary>
+        <div class="ans">
+          <p>Windows 10 / 11（64bit）で使えます。2026年11月15日まで無料ベータを公開し、2026年11月16日に正式版として、製品版の商品にWindows版を追加します。1回の購入でMacとWindowsの両方を使えます。Mac版をすでに購入した方は、BOOTHのライブラリから追加料金なしでWindows版をダウンロードできます。</p>
+          <p>Windows版はCPUだけで処理するため、Macより処理が重くなります。詳しくは<a href="#windows">動作環境</a>を見てください。</p>
+        </div>
+      </details>
+      <details>
+        <summary>DaVinci Resolveで使えますか</summary>
+        <div class="ans"><p>現在は対応していません。対応ホストは、Premiere ProとAfter Effectsの2025以降です。</p></div>
+      </details>
+      <details>
+        <summary>購入前に試せますか</summary>
+        <div class="ans"><p>無料体験版をBOOTHで配布しています。製品版と同じ全機能を使えますが、映像に薄い斜めの縞（ウォーターマーク）が入ります。ダウンロード商品のため購入後の返金はできないので、体験版で動作と仕上がりを確かめてから購入してください。</p></div>
+      </details>
+      <details>
+        <summary>複数の人が映っているときは、どうなりますか</summary>
+        <div class="ans"><p>同じ系統の肌色の人には、全員に処理が適用されます。特定の人だけに適用したいときは、Premiere ProやAfter Effects側のマスクと併用してください。</p></div>
+      </details>
+      <details>
+        <summary>背景や衣装の色まで処理されてしまいます</summary>
+        <div class="ans"><p>肌の色をもとに検出するため、肌に近い色の背景や小物を拾うことがあります。Show Maskで検出範囲を確認し、Hue Rangeを狭めてください。</p></div>
+      </details>
+      <details>
+        <summary>LOG素材でも使えますか</summary>
+        <div class="ans"><p>LOG素材は、Rec.709に変換してから使ってください。</p></div>
+      </details>
+      <details>
+        <summary>アップデート後も、保存済みのプロジェクトを開けますか</summary>
+        <div class="ans"><p>開けます。パラメータの識別子をバージョンの間で固定しているため、保存済みのプロジェクトでも各パラメータの値が引き継がれます。</p></div>
+      </details>
+      <details>
+        <summary>困ったときの連絡先は</summary>
+        <div class="ans"><p>BOOTHのメッセージで受け付けています。日本語と英語のどちらでも対応します。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 最後のCTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>まずは無料体験版で、手元の素材に当ててみる</h2>
+    <p>製品版と同じ全機能を試せます。エフェクトを適用して、Presetを選び、Amountで調整するところまで確認できます。</p>
+    <div class="price-line"><span class="label">製品版 買い切り</span><span class="js-price"><span class="price-now">&yen;9,800</span></span></div>
+    <p class="until js-until" hidden></p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://totonoe-plugin.booth.pm/items/8892910" rel="noopener">無料体験版をダウンロード</a>
+      <a class="btn btn-ghost" href="https://totonoe-plugin.booth.pm/items/8663073" rel="noopener">製品版を購入</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTHショップ（totonoe-plugin）</a>
+      <a href="https://note.com/studiomarimo" rel="noopener">作者のnote（studiomarimo）</a>
+      <a href="https://note.com/studiomarimo/n/n4d90fd2467b5" rel="noopener">使い方ガイド</a>
+    </div>
+    <p>Totonoe Skin Retouch は、Premiere ProとAfter Effects用の肌補正プラグインです。</p>
+    <p>Adobe、Premiere Pro、After Effects は、Adobe Inc. の米国およびその他の国における商標または登録商標です。このプラグインは、Adobe社が提供または承認したものではありません。</p>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
