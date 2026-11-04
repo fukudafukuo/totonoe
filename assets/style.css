@@ -102,7 +102,8 @@ figure { margin: 0; }
     linear-gradient(180deg, #120f26, var(--bg));
 }
 .eyebrow { color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 12px; }
-.hero h1 { font-size: clamp(28px, 5.6vw, 46px); line-height: 1.35; margin-bottom: 18px; }
+.hero h1.eyebrow { line-height: 1.6; }
+.hero .hero-title { font-size: clamp(28px, 5.6vw, 46px); line-height: 1.35; margin: 0 0 18px; font-weight: 700; letter-spacing: 0.01em; color: #fff; }
 .hero .lead { color: #d9d4ee; max-width: 640px; font-size: clamp(15px, 2.4vw, 17px); }
 .hero-grid { display: grid; gap: 32px; }
 .hero-copy { max-width: 720px; }
@@ -319,3 +320,13 @@ footer p { margin: 0 0 6px; line-height: 1.8; }
 
 .js-price { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 .final .js-price { justify-content: center; }
+
+/* 概要と比較の表 */
+.table-wrap { overflow-x: auto; margin: 0 0 12px; }
+.facts, .compare { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.7; min-width: 480px; }
+.facts th, .facts td, .compare th, .compare td { border-bottom: 1px solid var(--line); padding: 12px 14px; text-align: left; vertical-align: top; }
+.facts th, .compare tbody th { color: #e7e3f7; font-weight: 700; white-space: nowrap; }
+.compare thead th { color: var(--muted); font-size: 13px; font-weight: 700; }
+.compare tbody th { white-space: normal; }
+.compare tbody tr:first-child th, .compare tbody tr:first-child td { background: var(--surface-2); }
+#about .sub-h { margin-top: 36px; margin-bottom: 14px; font-size: 20px; }

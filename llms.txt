@@ -1,0 +1,25 @@
+# Totonoe Skin Retouch
+
+> Premiere ProとAfter Effectsで使う肌補正（美肌）プラグイン。肌の色を自動で検出し、輪郭と質感を残したまま、肌の粗さ・赤み・テカリ・色ムラを整える。MacとWindowsに対応、買い切り、無料体験版あり。
+
+- 販売: BOOTH（totonoe-plugin）
+- 対応ソフト: Adobe Premiere Pro、After Effects（2025以降）
+- 対応OS: macOS 13以降、Windows 10／11（64bit、CPU処理）
+- エフェクト名: Skin Retouch
+
+## 製品
+
+- [製品ページ](https://fukudafukuo.github.io/totonoe/): 概要、比較画像、動作環境、価格、よくある質問
+- [製品版（BOOTH）](https://totonoe-plugin.booth.pm/items/8663073)
+- [無料体験版（BOOTH）](https://totonoe-plugin.booth.pm/items/8892910): 製品版と同じ機能を試せる。映像に薄い斜めの縞が入る
+
+## 使い方と解説
+
+- [使い方ガイド](https://note.com/studiomarimo/n/n4d90fd2467b5): 手順と全パラメータの解説
+- [肌補正プラグインの比較](https://note.com/studiomarimo/n/nf96661de9817): Beauty Box、Cosmo、Beauty Studioとの価格と機能の比較
+- [Premiere Proで美肌補正する方法](https://note.com/studiomarimo/n/n2237eeddd976)
+- [肌の赤みやニキビを目立たなくする方法](https://note.com/studiomarimo/n/nf0e252da8214)
+- [肌のテカリを抑える方法](https://note.com/studiomarimo/n/n91209c75b8e9)
+- [肌の色ムラ・くすみを整える方法](https://note.com/studiomarimo/n/n6d3bb602a019)
+- [インタビュー動画の肌の編集](https://note.com/studiomarimo/n/ne4cc4004c54a)
+- [After Effectsで美肌補正する方法](https://note.com/studiomarimo/n/n0aab383df898)
