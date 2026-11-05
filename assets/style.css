@@ -328,6 +328,8 @@ footer p { margin: 0 0 6px; line-height: 1.8; }
 .facts th, .compare tbody th { color: #e7e3f7; font-weight: 700; white-space: nowrap; }
 .compare thead th { color: var(--muted); font-size: 13px; font-weight: 700; }
 .compare tbody th { white-space: normal; }
+.facts { min-width: 0; }
+.facts th { width: 8em; white-space: normal; }
 .compare .price-now { font-size: inherit; font-weight: 700; }
 .compare .price-was { font-size: 13px; margin-right: 6px; }
 .compare .sale-tag { margin-left: 6px; }
