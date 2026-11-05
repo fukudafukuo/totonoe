@@ -16,7 +16,7 @@
 ## 使い方と解説
 
 - [使い方ガイド](https://note.com/studiomarimo/n/n4d90fd2467b5): 手順と全パラメータの解説
-- [肌補正プラグインの比較](https://note.com/studiomarimo/n/nf96661de9817): Beauty Box、Cosmo、Beauty Studioとの価格と機能の比較
+- [肌補正プラグインの比較](https://note.com/studiomarimo/n/nf96661de9817): Beauty Box、Skinworks、Portraiture、Retouch4me、Cosmo、Beauty Studioとの価格と機能の比較
 - [Premiere Proで美肌補正する方法](https://note.com/studiomarimo/n/n2237eeddd976)
 - [肌の赤みやニキビを目立たなくする方法](https://note.com/studiomarimo/n/nf0e252da8214)
 - [肌のテカリを抑える方法](https://note.com/studiomarimo/n/n91209c75b8e9)
