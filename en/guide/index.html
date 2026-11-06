@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (GA4). The same measurement ID is also set in the BOOTH shop settings -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPGWX3PMB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPGWX3PMB1');
+</script>
+<title>Totonoe Skin Retouch User Guide – Premiere Pro &amp; After Effects skin retouch plugin</title>
+<meta name="description" content="User guide for Totonoe Skin Retouch, a skin retouch plugin for Premiere Pro and After Effects. Install on Mac and Windows, quick start, every parameter, tips for log footage and multiple people, and troubleshooting.">
+<link rel="canonical" href="https://fukudafukuo.github.io/totonoe/en/guide/">
+<meta name="theme-color" content="#0e0c1d">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Totonoe Skin Retouch">
+<meta property="og:title" content="Totonoe Skin Retouch User Guide – Premiere Pro &amp; After Effects skin retouch plugin">
+<meta property="og:description" content="Install, quick start, every parameter, tips and troubleshooting for Totonoe Skin Retouch on Mac and Windows.">
+<meta property="og:url" content="https://fukudafukuo.github.io/totonoe/en/guide/">
+<meta property="og:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Totonoe Skin Retouch User Guide">
+<meta name="twitter:description" content="Install, quick start, every parameter, tips and troubleshooting for Totonoe Skin Retouch on Mac and Windows.">
+<meta name="twitter:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  .guide-body { max-width: 860px; }
+  .guide-body h2 { font-size: clamp(24px, 4.4vw, 32px); margin: 0 0 14px; }
+  .guide-body h3 { font-size: 19px; margin: 28px 0 10px; }
+  .guide-body p, .guide-body li { color: #d9d4ee; }
+  .guide-body ul, .guide-body ol { padding-left: 1.3em; margin: 0 0 16px; }
+  .guide-body li + li { margin-top: 6px; }
+  .guide-body code { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 0.92em; overflow-wrap: anywhere; }
+  .guide-body .table-wrap { margin: 12px 0 18px; }
+  .guide-body table { min-width: 560px; }
+  .guide-hero { padding: 40px 0 28px; background: linear-gradient(180deg, #120f26, var(--bg)); }
+  .guide-hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.4; margin: 0 0 12px; color: #fff; }
+  .guide-hero p { color: #d9d4ee; max-width: 720px; margin: 0 0 8px; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin: 24px 0 0; max-width: 720px; }
+  .toc h2 { font-size: 16px; margin: 0 0 8px; }
+  .toc ol { margin: 0; padding-left: 1.3em; columns: 2 240px; }
+  .toc li { margin: 0 0 4px; }
+  .toc a { color: var(--accent); }
+  .guide-sec { padding: 44px 0; scroll-margin-top: 64px; }
+  .guide-sec[id], .guide-body h3[id] { scroll-margin-top: 72px; }
+  .guide-fig { margin: 18px 0 0; max-width: 860px; }
+  .guide-fig img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "@id": "https://fukudafukuo.github.io/totonoe/en/guide/#guide",
+ "headline": "Totonoe Skin Retouch User Guide",
+ "description": "User guide for Totonoe Skin Retouch, a skin retouch plugin for Premiere Pro and After Effects: install on Mac and Windows, quick start, every parameter, tips and troubleshooting.",
+ "url": "https://fukudafukuo.github.io/totonoe/en/guide/",
+ "mainEntityOfPage": "https://fukudafukuo.github.io/totonoe/en/guide/",
+ "inLanguage": "en",
+ "image": "https://fukudafukuo.github.io/totonoe/assets/ogp.jpg",
+ "dateModified": "2026-11-07",
+ "proficiencyLevel": "Beginner",
+ "about": {
+  "@type": "SoftwareApplication",
+  "@id": "https://fukudafukuo.github.io/totonoe/en/#software",
+  "name": "Totonoe Skin Retouch",
+  "softwareVersion": "1.8.0",
+  "url": "https://fukudafukuo.github.io/totonoe/en/"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">Totonoe<small>Skin Retouch</small></a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#install">Install</a>
+      <a href="#quick-start">Quick start</a>
+      <a href="#parameters">Parameters</a>
+      <a href="#tips">Tips</a>
+      <a href="#trial">Trial</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://booth.pm/en/items/8892910" rel="noopener">Free trial</a>
+    <a href="../../" hreflang="ja" lang="ja" style="margin-left:4px;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap">日本語</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="guide-hero" id="top">
+  <div class="wrap guide-body">
+    <h1>Totonoe Skin Retouch User Guide</h1>
+    <p>Totonoe Skin Retouch is a skin retouch plugin for Adobe Premiere Pro and After Effects. It detects skin automatically and evens out roughness, redness and shine while keeping edges, hair and natural skin texture.</p>
+    <p>This guide covers version 1.8.0 on Mac and Windows. For an overview, price and FAQ, see the <a href="../">product page</a>.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#requirements">System requirements</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#presets">Presets</a></li>
+        <li><a href="#parameters">Parameter reference</a></li>
+        <li><a href="#workflow">Recommended workflow</a></li>
+        <li><a href="#tips">Tips for common shots</a></li>
+        <li><a href="#trial">Trial and full version</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#limitations">Known limitations</a></li>
+        <li><a href="#support">Support</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="guide-sec" id="requirements">
+  <div class="wrap guide-body">
+    <h2>System requirements</h2>
+    <div class="table-wrap">
+      <table class="facts">
+        <tr><th scope="row">Mac</th><td>macOS 13 or later. Apple Silicon and Intel (Universal Binary). Processed on a Metal-compatible GPU.</td></tr>
+        <tr><th scope="row">Windows</th><td>Windows 10 / 11 (64-bit). CPU only: the Windows version does not use the GPU, so it is slower than the Mac version.</td></tr>
+        <tr><th scope="row">Host apps</th><td>Adobe Premiere Pro 2025 or later, Adobe After Effects 2025 or later. Developed and tested on the 2026 releases of both.</td></tr>
+        <tr><th scope="row">Not supported</th><td>DaVinci Resolve and other hosts.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="install">
+  <div class="wrap guide-body">
+    <h2>Install</h2>
+    <p>One install works in both Premiere Pro and After Effects, because the plugin goes into Adobe's shared MediaCore folder.</p>
+
+    <h3 id="install-mac">Mac</h3>
+    <ol>
+      <li>Double-click <code>SkinRetouch-Installer.pkg</code> and follow the installer. It is signed and notarized by Apple, so Gatekeeper does not block it.</li>
+      <li>In the full version, the license is set automatically. You do not need to enter a key or move any files.</li>
+      <li>Quit After Effects or Premiere Pro completely, then start it again.</li>
+      <li>Open the Effects panel. The effect <strong>Skin Retouch</strong> is in the <strong>Skin Retouch</strong> category.</li>
+    </ol>
+    <p>The installed file is here:</p>
+    <p><code>/Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore/SkinRetouch.plugin</code></p>
+
+    <h3 id="install-windows">Windows</h3>
+    <ol>
+      <li>Close Premiere Pro, After Effects and Media Encoder before you install.</li>
+      <li>Unzip the downloaded file and run the installer (.exe).</li>
+      <li>The installer is not code-signed, so Windows SmartScreen may show &ldquo;Windows protected your PC&rdquo;. Click <strong>More info</strong>, then click <strong>Run</strong>. This screen appears because the installer has no Windows code signature. It does not mean the file has a problem.</li>
+      <li>Follow the installer. In the full version, the license is set automatically.</li>
+      <li>Start Premiere Pro or After Effects. The effect <strong>Skin Retouch</strong> is in the <strong>Skin Retouch</strong> category of the Effects panel.</li>
+    </ol>
+    <p>The Windows version is installed into Adobe's shared MediaCore folder, <code>C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\</code>.</p>
+    <p>A free Windows beta is available until November 15, 2026. The official Windows version is added to the same full version product on BOOTH from November 16, 2026, so one purchase covers both Mac and Windows. If you already bought the Mac version, you can download the Windows version from your BOOTH library at no extra cost.</p>
+
+    <p>Get the installers from BOOTH: <a href="https://booth.pm/en/items/8663073" rel="noopener">full version</a> or <a href="https://booth.pm/en/items/8892910" rel="noopener">free trial</a>.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="quick-start">
+  <div class="wrap guide-body">
+    <h2>Quick start</h2>
+    <p>The steps are the same in Premiere Pro and After Effects.</p>
+    <ol class="steps">
+      <li>
+        <h3>Apply the effect</h3>
+        <p>Apply <strong>Skin Retouch</strong> to a clip or layer. Skin is detected automatically the moment you apply it.</p>
+      </li>
+      <li>
+        <h3>Choose a preset</h3>
+        <p>Pick <strong>Natural</strong>, <strong>Standard</strong> or <strong>Strong</strong>. If you are not sure, keep Standard.</p>
+      </li>
+      <li>
+        <h3>Adjust Amount</h3>
+        <p>Use <strong>Amount</strong> to set the overall strength up or down.</p>
+      </li>
+    </ol>
+    <p style="margin-top:18px">Most shots need nothing more. Turn on <strong>Compare (Show Original)</strong> at any time to check your result against the untouched source.</p>
+    <figure class="guide-fig">
+      <img src="../../assets/ba-nose.webp" width="1580" height="585" alt="Before and after on the cheek and the side of the nose, using the default setting" loading="lazy" decoding="async">
+      <figcaption class="cap">Result with the default setting (Standard), cropped to the cheek and the side of the nose.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="presets">
+  <div class="wrap guide-body">
+    <h2>Presets</h2>
+    <p>A preset sets six sliders at once: Smoothing, Texture, De-Shine, Blemish, Redness and Paleness.</p>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Preset</th><th scope="col">Smoothing</th><th scope="col">Texture</th><th scope="col">De-Shine</th><th scope="col">Blemish</th><th scope="col">Redness</th><th scope="col">Paleness</th><th scope="col">Use for</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Natural</th><td>25</td><td>60</td><td>0</td><td>0</td><td>0</td><td>0</td><td>A light touch that keeps the most texture</td></tr>
+          <tr><th scope="row">Standard (default)</th><td>50</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Everyday interview and corporate work</td></tr>
+          <tr><th scope="row">Strong</th><td>80</td><td>30</td><td>25</td><td>25</td><td>8</td><td>0</td><td>Difficult footage: harsh light, visible blemishes, shine</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Custom</strong> is selected automatically as soon as you change any of those six sliders by hand. Choose a named preset again to return to its values.</p>
+    <p>Standard matches the default values of earlier versions, so opening an older project does not change how it renders.</p>
+    <figure class="guide-fig">
+      <a class="zoom" href="../../assets/presets.webp" target="_blank" rel="noopener"><img src="../../assets/presets.webp" width="1024" height="621" alt="Comparison of the original, Natural, Standard and Strong, with a cheek close-up in the bottom row" loading="lazy" decoding="async"></a>
+      <figcaption class="cap">From left: original, Natural, Standard, Strong. The bottom row is a cheek close-up. (The labels inside this image are in Japanese: the first column is the original, the others are Natural &ldquo;keeps texture, light&rdquo;, Standard &ldquo;default&rdquo; and Strong &ldquo;firm&rdquo;.)</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="guide-sec" id="parameters">
+  <div class="wrap guide-body">
+    <h2>Parameter reference</h2>
+    <p>Parameters are listed in the order they appear in the Effect Controls panel.</p>
+
+    <h3>Main controls</h3>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Parameter</th><th scope="col">Range</th><th scope="col">Default</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Preset</th><td>Natural / Standard / Strong / Custom</td><td>Standard</td><td>Sets the six retouch sliders at once. See <a href="#presets">Presets</a>.</td></tr>
+          <tr><th scope="row">Auto Detect</th><td>On / Off</td><td>On</td><td>Estimates the skin hue from the image on every frame, so you do not pick a color by hand. While it is on, <strong>Skin Color</strong> is ignored.</td></tr>
+          <tr><th scope="row">Temporal Stability</th><td>0&ndash;100</td><td>50</td><td>Steadies Auto Detect across neighboring frames (the current frame and the two before it), so compression noise or a passing highlight does not make the mask flicker. It works only while Auto Detect is on. 0 turns it off.</td></tr>
+          <tr><th scope="row">Amount</th><td>0&ndash;100</td><td>100</td><td>One dial that scales Smoothing, De-Shine, Blemish, Redness and Paleness together. Lower it to soften the whole look without rebalancing each slider. Texture is not scaled by Amount. At 0 the output matches the original, because texture is only restored where smoothing is applied.</td></tr>
+          <tr><th scope="row">Compare (Show Original)</th><td>On / Off</td><td>Off</td><td>Shows the untouched source so you can compare. Turn it off before you render.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Skin Selection</h3>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Parameter</th><th scope="col">Range</th><th scope="col">Default</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Skin Color</th><td>Color / eyedropper</td><td>A light skin tone (R 210, G 160, B 140)</td><td>The skin tone used for detection when Auto Detect is <strong>off</strong>. Use the eyedropper on a mid-tone area of the cheek, avoiding shadows and highlights.</td></tr>
+          <tr><th scope="row">Hue Range</th><td>0&ndash;90 degrees</td><td>25</td><td>How wide a range of hues counts as skin. Too narrow misses skin; too wide picks up clothing or background. 20&ndash;30 suits most footage.</td></tr>
+          <tr><th scope="row">Hue Softness</th><td>0&ndash;100</td><td>50</td><td>Feathers the edge of the skin mask. 40&ndash;60 gives smooth transitions.</td></tr>
+          <tr><th scope="row">Show Mask</th><td>On / Off</td><td>Off</td><td>Shows the detected skin area in white. Use it while you adjust detection, and turn it off before you render.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Smoothing</h3>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Parameter</th><th scope="col">Range</th><th scope="col">Default</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Smoothing</th><td>0&ndash;100</td><td>50</td><td>Strength of the edge-preserving skin smoothing. Edges, hair, eyebrows and eyelashes are protected. 40&ndash;60 is the typical working range.</td></tr>
+          <tr><th scope="row">Texture</th><td>0&ndash;100</td><td>40</td><td>Restores fine detail (pores, natural grain) after smoothing, which prevents a plastic, painted look. Raise it when you raise Smoothing. 30&ndash;50 is typical.</td></tr>
+          <tr><th scope="row">De-Shine</th><td>0&ndash;100</td><td>0</td><td>Reduces bright shine on the skin. Use it only on shots that need it, typically up to 40.</td></tr>
+          <tr><th scope="row">Blemish</th><td>0&ndash;100</td><td>0</td><td>Makes small dark spots such as acne and small blemishes less noticeable. Eyebrows and eyelashes are protected automatically. Keep it moderate (up to about 50), because very high values can flatten natural shadows.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Color</h3>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Parameter</th><th scope="col">Range</th><th scope="col">Default</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Redness</th><td>&minus;100 to +100</td><td>0</td><td>Adds (+) or removes (&minus;) redness and flush in the skin. &plusmn;10&ndash;20 looks natural.</td></tr>
+          <tr><th scope="row">Paleness</th><td>&minus;100 to +100</td><td>0</td><td>Moves the skin lighter (+) or toward a tan (&minus;). &plusmn;10&ndash;20 looks natural.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Output and help</h3>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Parameter</th><th scope="col">Range</th><th scope="col">Default</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Output Mix</th><td>0&ndash;100</td><td>100</td><td>Final blend between the retouched result and the original. 100 is the full result; lower values mix the original back in.</td></tr>
+          <tr><th scope="row">User Guide (button)</th><td>Button</td><td>&mdash;</td><td>At the bottom of the effect. In the full version it is labeled <strong>User Guide</strong> and opens the usage guide in your web browser. In the trial it is labeled <strong>Buy on BOOTH</strong> and opens the full version page. The button does not affect rendering.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="workflow">
+  <div class="wrap guide-body">
+    <h2>Recommended workflow</h2>
+    <ol>
+      <li><strong>Leave Auto Detect on.</strong> It handles most footage without any setup.</li>
+      <li><strong>Check the mask.</strong> Turn on <strong>Show Mask</strong> and confirm the white area covers the skin without spilling onto clothing or background.</li>
+      <li><strong>Refine detection if needed.</strong> Adjust <strong>Hue Range</strong> and <strong>Hue Softness</strong> if the mask misses skin or picks up other areas.</li>
+      <li><strong>Pick a preset.</strong> Turn Show Mask off, then choose Natural, Standard or Strong.</li>
+      <li><strong>Set the strength with Amount.</strong> Set the overall level before you touch individual sliders.</li>
+      <li><strong>Fine-tune only what the shot needs.</strong> Add De-Shine for shine, Blemish for spots, and Redness or Paleness for tone.</li>
+      <li><strong>Final check.</strong> With Show Mask and Compare off, review the shot at 100% zoom and at full-frame size.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="guide-sec" id="tips">
+  <div class="wrap guide-body">
+    <h2>Tips for common shots</h2>
+
+    <h3 id="tip-multiple">Several people in the frame</h3>
+    <p>The effect is applied to everyone with a similar skin tone. To retouch only one person, turn Auto Detect <strong>off</strong> and use the <strong>Skin Color</strong> eyedropper on that person, or combine Skin Retouch with a mask in Premiere Pro or After Effects.</p>
+
+    <h3 id="tip-moving">Moving shots and changing light</h3>
+    <ul>
+      <li>With Auto Detect on, the skin hue is estimated on every frame. Keep <strong>Temporal Stability</strong> at its default of 50 (or raise it) if the mask flickers.</li>
+      <li>If the detected area jumps noticeably from shot to shot, switch Auto Detect off and pick the skin with Skin Color.</li>
+      <li>With Auto Detect off, pick Skin Color again for each shot whose lighting differs significantly.</li>
+    </ul>
+
+    <h3 id="tip-log">Log footage</h3>
+    <p>Log footage (S-Log, V-Log and similar ungraded formats) places skin outside the expected color range, so detection becomes unreliable. Apply your color conversion (a Rec.709 LUT) or Lumetri Color <strong>first</strong>, and place Skin Retouch <strong>after</strong> it in the effect stack.</p>
+
+    <h3 id="tip-background">Background or clothing detected as skin</h3>
+    <ul>
+      <li>Turn on <strong>Show Mask</strong> and narrow <strong>Hue Range</strong> while you watch the white area.</li>
+      <li>Turn Auto Detect off and pick the skin with <strong>Skin Color</strong>. Beige walls, wood and warm interiors are typical backgrounds that get picked up.</li>
+      <li>If some of the background still gets softened, lower <strong>Amount</strong> until it is not noticeable.</li>
+    </ul>
+
+    <h3 id="tip-color-cast">Strong color casts from colored lighting</h3>
+    <p>Widen <strong>Hue Range</strong> slightly and raise <strong>Hue Softness</strong>.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="trial">
+  <div class="wrap guide-body">
+    <h2>Trial and full version</h2>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col"></th><th scope="col">Free trial</th><th scope="col">Full version</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Features</th><td>Every feature of the full version</td><td>Every feature</td></tr>
+          <tr><th scope="row">Video output</th><td>Faint diagonal stripes (a watermark) are added to the video</td><td>No watermark</td></tr>
+          <tr><th scope="row">License</th><td>None needed</td><td>Set automatically by the installer</td></tr>
+          <tr><th scope="row">Button at the bottom of the effect</th><td>Buy on BOOTH</td><td>User Guide</td></tr>
+          <tr><th scope="row">Where</th><td><a href="https://booth.pm/en/items/8892910" rel="noopener">BOOTH (free trial)</a></td><td><a href="https://booth.pm/en/items/8663073" rel="noopener">BOOTH (full version)</a>, one-time purchase of &yen;9,800 (about US$65)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The full version is a download product, so purchases cannot be refunded except when the product is defective. Please test the free trial on your own footage before you buy.</p>
+    <p>During the free Windows beta (until November 15, 2026), the beta runs without a watermark. After that date, a copy without a license runs as the trial.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="troubleshooting">
+  <div class="wrap guide-body">
+    <h2>Troubleshooting</h2>
+
+    <h3 id="ts-not-listed">The effect does not appear in the Effects panel</h3>
+    <ul>
+      <li>Check that the plugin is in the shared MediaCore folder: <code>/Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore/SkinRetouch.plugin</code> on Mac, or <code>C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\</code> on Windows.</li>
+      <li>Quit Premiere Pro or After Effects <strong>completely</strong> and start it again. Reopening a project is not enough.</li>
+      <li>In Premiere Pro, type &ldquo;Skin Retouch&rdquo; into the Effects panel search box. The category may be collapsed.</li>
+    </ul>
+
+    <h3 id="ts-mask">The mask picks up the wrong areas, or misses skin</h3>
+    <ul>
+      <li>Is the footage log? This is the most common cause. See <a href="#tip-log">Log footage</a>.</li>
+      <li>Turn Auto Detect off and use the Skin Color eyedropper. If that fixes it, the footage does not suit automatic detection.</li>
+      <li>For a strong color cast, widen Hue Range slightly and raise Hue Softness.</li>
+      <li>If a skin-toned background is softened, narrow Hue Range and pick Skin Color again while you watch Show Mask. If some remains, lower Amount until it is not noticeable.</li>
+    </ul>
+
+    <h3 id="ts-slow">Playback is slow</h3>
+    <ul>
+      <li>In Premiere Pro, lower the Program Monitor&rsquo;s <strong>Playback Resolution</strong> to 1/2 (or 1/4). If playback stutters at Full on 4K footage, 1/2 is usually a good first step. In After Effects, lower the preview resolution the same way.</li>
+      <li>On Mac, rendering uses the GPU through Metal. If the GPU path cannot be used, the plugin falls back to CPU processing, which is slower on high-resolution footage.</li>
+      <li>The Windows version runs on the CPU only, so it is slower than the Mac version. Lowering the playback resolution helps most there.</li>
+      <li>Judge performance from a final render or export. Real-time preview speed often does not match render time.</li>
+    </ul>
+
+    <h3 id="ts-watermark">A watermark (diagonal stripes) appears on the image</h3>
+    <p>The plugin renders with faint diagonal stripes when it finds no valid license. This is how the free trial works. If you bought the full version, reinstall with the installer from your purchase, then quit and restart the host app completely. If the stripes remain, contact support through BOOTH.</p>
+
+    <h3 id="ts-smartscreen">Windows shows &ldquo;Windows protected your PC&rdquo;</h3>
+    <p>Click <strong>More info</strong>, then <strong>Run</strong>. The installer is not code-signed, which is why SmartScreen warns. If the installer reports that Premiere Pro, After Effects or Media Encoder is running, close it and run the installer again.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="limitations">
+  <div class="wrap guide-body">
+    <h2>Known limitations</h2>
+    <ul>
+      <li><strong>Large moles</strong> (roughly 7 px across or larger) are not removed by Blemish. This is intentional: the same protection keeps eyebrows and eyelashes from being erased.</li>
+      <li><strong>Several people</strong> with similar skin tones are all affected together. See <a href="#tip-multiple">Several people in the frame</a>.</li>
+      <li><strong>DaVinci Resolve</strong> and other hosts are not supported. The plugin runs in After Effects and Premiere Pro only.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="guide-sec" id="support">
+  <div class="wrap guide-body">
+    <h2>Support</h2>
+    <p>Send a message through BOOTH. You can write in English or Japanese. Please include your OS and version, your Premiere Pro or After Effects version, and what happened.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="https://booth.pm/en/items/8663073" rel="noopener">Buy the full version</a>
+    </div>
+    <p style="margin-top:18px"><a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTH shop (totonoe-plugin)</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Product page</a>
+      <a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTH shop (totonoe-plugin)</a>
+      <a href="../../" hreflang="ja" lang="ja">日本語</a>
+    </div>
+    <p>Totonoe Skin Retouch is a skin retouch plugin for Premiere Pro and After Effects.</p>
+    <p>Adobe, Premiere Pro and After Effects are trademarks or registered trademarks of Adobe Inc. in the United States and other countries. This plugin is not provided or endorsed by Adobe.</p>
+    <p>This site uses Google Analytics to understand how it is visited. Google Analytics collects visit information with cookies, but the information does not identify individuals. <a href="https://policies.google.com/technologies/partner-sites?hl=en" rel="noopener">How Google uses data</a></p>
+  </div>
+</footer>
+</body>
+</html>
