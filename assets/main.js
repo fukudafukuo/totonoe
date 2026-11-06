@@ -8,11 +8,7 @@ var REGULAR_PRICE = 9800;
 var PERIODS = [
   { id: 'regular-beta',  from: '0000-01-01', to: '2026-11-15', price: 9800, sale: null,
     win: 'beta' },
-  { id: 'win-launch',    from: '2026-11-16', to: '2026-11-26', price: 7800, sale: 'Windows版発売記念', until: '11月26日',
-    win: 'official' },
-  { id: 'blackfriday',   from: '2026-11-27', to: '2026-12-01', price: 6800, sale: 'ブラックフライデー', until: '12月1日',
-    win: 'official' },
-  { id: 'regular-after', from: '2026-12-02', to: '9999-12-31', price: 9800, sale: null,
+  { id: 'regular-after', from: '2026-11-16', to: '9999-12-31', price: 9800, sale: null,
     win: 'official' }
 ];
 
