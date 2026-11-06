@@ -17,6 +17,7 @@
 
 - [使い方ガイド](https://note.com/studiomarimo/n/n4d90fd2467b5): 手順と全パラメータの解説
 - [肌補正プラグインの比較](https://note.com/studiomarimo/n/nf96661de9817): Beauty Box、Skinworks、Portraiture、Retouch4me、Cosmo、Beauty Studioとの価格と機能の比較
+- [動画の肌補正はAIでできる？](https://note.com/studiomarimo/n/nceb1808c6636): AI機能とAIプラグインの現状、¥9,800の肌補正プラグインが安い理由
 - [肌補正プラグインの選び方](https://note.com/studiomarimo/n/n486f8bf1e1f2): 確認する5つの点と3年間の費用
 - [Premiere Proで美肌補正する方法](https://note.com/studiomarimo/n/n2237eeddd976)
 - [肌の赤みやニキビを目立たなくする方法](https://note.com/studiomarimo/n/nf0e252da8214)
