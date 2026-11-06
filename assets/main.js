@@ -90,7 +90,10 @@ var PERIODS = [
       pos = Math.max(0, Math.min(100, v));
       root.style.setProperty('--pos', pos + '%');
       handle.setAttribute('aria-valuenow', String(Math.round(pos)));
-      handle.setAttribute('aria-valuetext', '左側がBefore、右側がAfter。境界は左から' + Math.round(pos) + '%の位置');
+      var en = document.documentElement.lang === 'en';
+      handle.setAttribute('aria-valuetext', en
+        ? 'Before on the left, After on the right. The divider is ' + Math.round(pos) + '% from the left'
+        : '左側がBefore、右側がAfter。境界は左から' + Math.round(pos) + '%の位置');
     }
     function fromEvent(e) {
       var r = root.getBoundingClientRect();
@@ -174,7 +177,7 @@ var PERIODS = [
       var id = a.getAttribute('data-vimeo');
       var f = document.createElement('iframe');
       f.src = 'https://player.vimeo.com/video/' + id + '?autoplay=1&dnt=1';
-      f.title = 'Totonoe Skin Retouch デモ動画';
+      f.title = document.documentElement.lang === 'en' ? 'Totonoe Skin Retouch demo video' : 'Totonoe Skin Retouch デモ動画';
       f.allow = 'autoplay; fullscreen; picture-in-picture';
       f.referrerPolicy = 'strict-origin-when-cross-origin';
       a.appendChild(f);

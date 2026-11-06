@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://fukudafukuo.github.io/totonoe/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fukudafukuo.github.io/totonoe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fukudafukuo.github.io/totonoe/en/"/>
+  </url>
+  <url>
+    <loc>https://fukudafukuo.github.io/totonoe/en/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fukudafukuo.github.io/totonoe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fukudafukuo.github.io/totonoe/en/"/>
   </url>
 </urlset>

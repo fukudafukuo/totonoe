@@ -25,3 +25,12 @@
 - [肌の色ムラ・くすみを整える方法](https://note.com/studiomarimo/n/n6d3bb602a019)
 - [インタビュー動画の肌の編集](https://note.com/studiomarimo/n/ne4cc4004c54a)
 - [After Effectsで美肌補正する方法](https://note.com/studiomarimo/n/n0aab383df898)
+
+## English
+
+> Totonoe Skin Retouch is a skin retouch (beauty) plugin for Adobe Premiere Pro and After Effects. It detects skin color automatically and evens out roughness, redness, shine and uneven color while keeping edges and texture. One-time purchase, free trial available. macOS 13 or later and Windows 10/11 (64-bit, CPU processing).
+
+- [English product page](https://fukudafukuo.github.io/totonoe/en/): overview, comparison images, system requirements, price (one-time purchase, 9,800 yen, about US$65), FAQ
+- [Full version (BOOTH, English)](https://booth.pm/en/items/8663073)
+- [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
+- Support: send a message through BOOTH in English or Japanese
