@@ -33,6 +33,7 @@
 
 - [English product page](https://fukudafukuo.github.io/totonoe/en/): overview, comparison images, system requirements, price (one-time purchase, 9,800 yen, about US$65), FAQ
 - [English user guide](https://fukudafukuo.github.io/totonoe/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
+- [How to retouch skin in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/): the built-in Lumetri Color (HSL Secondary) method step by step, its weak points, a plugin as the second method, and tips for a natural look
 - [Full version (BOOTH, English)](https://booth.pm/en/items/8663073)
 - [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
 - Processing: everything runs on your computer. Footage is never uploaded, and it works offline once installed

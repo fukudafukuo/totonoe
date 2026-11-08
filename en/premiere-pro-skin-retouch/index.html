@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (GA4). The same measurement ID is also set in the BOOTH shop settings -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPGWX3PMB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPGWX3PMB1');
+</script>
+<title>How to Retouch Skin in Premiere Pro: The Built-in Lumetri Method and a Plugin</title>
+<meta name="description" content="How to smooth and retouch skin in Premiere Pro. A step-by-step method using Lumetri Color HSL Secondary and a negative Sharpen, its weak points, a skin retouch plugin as the second method, and tips for a natural result.">
+<link rel="canonical" href="https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/">
+<meta name="theme-color" content="#0e0c1d">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Totonoe Skin Retouch">
+<meta property="og:title" content="How to Retouch Skin in Premiere Pro: The Built-in Lumetri Method and a Plugin">
+<meta property="og:description" content="A step-by-step skin smoothing method with Lumetri Color HSL Secondary, its weak points, a plugin as the second method, and tips for a natural look.">
+<meta property="og:url" content="https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/">
+<meta property="og:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Retouch Skin in Premiere Pro">
+<meta name="twitter:description" content="The built-in Lumetri Color method, its weak points, a plugin as the second method, and tips for a natural look.">
+<meta name="twitter:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  .guide-body { max-width: 860px; }
+  .guide-body h2 { font-size: clamp(24px, 4.4vw, 32px); margin: 0 0 14px; }
+  .guide-body h3 { font-size: 19px; margin: 28px 0 10px; }
+  .guide-body p, .guide-body li { color: #d9d4ee; }
+  .guide-body ul, .guide-body ol { padding-left: 1.3em; margin: 0 0 16px; }
+  .guide-body li + li { margin-top: 6px; }
+  .guide-hero { padding: 40px 0 28px; background: linear-gradient(180deg, #120f26, var(--bg)); }
+  .guide-hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.4; margin: 0 0 12px; color: #fff; }
+  .guide-hero p { color: #d9d4ee; max-width: 720px; margin: 0 0 8px; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin: 24px 0 0; max-width: 720px; }
+  .toc h2 { font-size: 16px; margin: 0 0 8px; }
+  .toc ol { margin: 0; padding-left: 1.3em; columns: 2 240px; }
+  .toc li { margin: 0 0 4px; }
+  .toc a { color: var(--accent); }
+  .guide-sec { padding: 44px 0; scroll-margin-top: 64px; }
+  .guide-sec[id], .guide-body h3[id] { scroll-margin-top: 72px; }
+  .guide-fig { margin: 18px 0 0; max-width: 860px; }
+  .guide-fig img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "@id": "https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/#article",
+ "headline": "How to Retouch Skin in Premiere Pro: The Built-in Lumetri Method and a Plugin",
+ "description": "How to smooth and retouch skin in Premiere Pro with Lumetri Color HSL Secondary and a negative Sharpen, the weak points of that method, a skin retouch plugin as the second method, and tips for a natural result.",
+ "url": "https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/",
+ "mainEntityOfPage": "https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/",
+ "inLanguage": "en",
+ "image": "https://fukudafukuo.github.io/totonoe/assets/ogp.jpg",
+ "datePublished": "2026-11-08",
+ "dateModified": "2026-11-08",
+ "about": {
+  "@type": "SoftwareApplication",
+  "@id": "https://fukudafukuo.github.io/totonoe/en/#software",
+  "name": "Totonoe Skin Retouch",
+  "url": "https://fukudafukuo.github.io/totonoe/en/"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">Totonoe<small>Skin Retouch</small></a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#answer">Short answer</a>
+      <a href="#lumetri">Lumetri method</a>
+      <a href="#natural">Natural look</a>
+      <a href="#plugin">Plugin</a>
+      <a href="#summary">Summary</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://booth.pm/en/items/8892910" rel="noopener">Free trial</a>
+    <a href="../../" hreflang="ja" lang="ja" style="margin-left:4px;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap">日本語</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="guide-hero" id="top">
+  <div class="wrap guide-body">
+    <h1>How to Retouch Skin in Premiere Pro: The Built-in Lumetri Method and a Plugin</h1>
+    <p>This article covers two ways to make a person's skin look better in Premiere Pro: using only the built-in tools, and using a plugin.</p>
+    <p>I am a video editor in Japan (music videos, interviews and commercials), and I retouch skin as a regular part of that work. I also develop Totonoe Skin Retouch, the plugin described in method 2.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#answer">Short answer</a></li>
+        <li><a href="#lumetri">Method 1: Lumetri Color (HSL Secondary)</a></li>
+        <li><a href="#weak-points">Weak points of method 1</a></li>
+        <li><a href="#natural">Tips for a natural look</a></li>
+        <li><a href="#plugin">Method 2: A skin retouch plugin</a></li>
+        <li><a href="#requirements">System requirements</a></li>
+        <li><a href="#get">Where to get it</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="guide-sec" id="answer">
+  <div class="wrap guide-body">
+    <h2>Short answer</h2>
+    <ul>
+      <li>If you do not want to spend anything, use <strong>HSL Secondary</strong> in Lumetri Color to select only the skin color, then set <strong>Sharpen</strong> to a negative value.</li>
+      <li>If you have many cuts, or you care a lot about the finish, use a skin retouch plugin.</li>
+    </ul>
+    <p>The tips for a natural look apply to both methods. They are in <a href="#natural">the second half of this article</a>.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="lumetri">
+  <div class="wrap guide-body">
+    <h2>Method 1: Smooth skin with Lumetri Color (HSL Secondary)</h2>
+    <p>This method uses only the tools that come with Premiere Pro.</p>
+    <ol>
+      <li>Select the clip you want to retouch and open the <strong>Lumetri Color</strong> panel (Window &gt; Lumetri Color). Click <strong>HSL Secondary</strong> to open it.</li>
+      <li>In <strong>Key</strong>, use the <strong>Set color</strong> eyedropper and click a mid-tone area of the cheek.</li>
+      <li>Check the <strong>Color/Gray</strong> box to see what is selected. Areas shown in gray are not selected. The first click often selects only the darker parts of the skin, so use the <strong>+</strong> eyedropper to add brighter areas such as the forehead and the top of the cheek. If clothing or background is selected, use the <strong>&minus;</strong> eyedropper to remove it. You can also adjust the <strong>H</strong>, <strong>S</strong> and <strong>L</strong> sliders. The goal is a selection where only the skin keeps its color.</li>
+      <li>In <strong>Refine</strong>, raise <strong>Denoise</strong> and <strong>Blur</strong> a little to blend the edge of the selection. I used Denoise 10 and Blur 6 on my example footage.</li>
+      <li>Uncheck <strong>Color/Gray</strong>, then set <strong>Sharpen</strong> under <strong>Correction</strong> to a negative value. Start around -30 to -50.</li>
+      <li>Compare with the footage before correction and check the result. At -100, fine wrinkles are reduced further, but the outlines of the eyes and eyebrows also become soft.</li>
+    </ol>
+    <p>To apply the same look to many clips at once, put Lumetri Color on an adjustment layer.</p>
+
+    <h3 id="weak-points">Weak points of method 1</h3>
+    <p>This method is quick, but it has these weak points:</p>
+    <ul>
+      <li>Backgrounds, clothing and hair with a color close to skin are selected too, and they are blurred as well.</li>
+      <li>A negative Sharpen blurs the whole selection evenly. At a strong setting, the outlines of the eyes and lips also become soft, and the skin can look flat and painted.</li>
+      <li>On shots where the lighting changes or the subject moves, the selection can fluctuate and the correction can flicker.</li>
+      <li>You have to pick the color again with the eyedropper whenever the shot or lighting changes.</li>
+    </ul>
+    <p>For one short interview this is enough. On a project with many cuts, or with a person who stays in a close-up for a long time, these points become a burden.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="natural">
+  <div class="wrap guide-body">
+    <h2>Tips for a natural look (both methods)</h2>
+    <ul>
+      <li>For log footage, apply a color conversion first (for example a Rec.709 LUT), then retouch the skin. In log, skin color is not captured correctly, so the skin selection does not work well.</li>
+      <li>Do not remove all of the pores and skin texture. Skin looks more natural when some texture remains.</li>
+      <li>Check at 100% zoom. At a reduced zoom it is hard to notice when you have gone too far.</li>
+      <li>Compare with the footage before correction. As your eyes get used to the result, you tend to apply more and more.</li>
+      <li>Do the final check on the exported video.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="plugin">
+  <div class="wrap guide-body">
+    <h2>Method 2: Use a skin retouch plugin</h2>
+    <p>There are established skin retouch plugins for Premiere Pro and After Effects from overseas developers, such as Cosmo II in Magic Bullet and Beauty Box from Digital Anarchy. They detect skin, smooth it while keeping edges, and restore texture automatically, which reduces the weak points of method 1 together. On the other hand, they are cost around US$200 or more, or are sold as subscriptions.</p>
+    <p>So I made <strong>Totonoe Skin Retouch</strong> for my own projects. It is sold on BOOTH as a one-time purchase of &yen;9,800 (about US$65), and there is a free trial with the same features as the full version.</p>
+
+    <h3>Three steps</h3>
+    <ol>
+      <li>Apply the effect <strong>Skin Retouch</strong> to a clip. Skin is detected automatically the moment you apply it.</li>
+      <li>Choose a <strong>Preset</strong> (Natural, Standard or Strong).</li>
+      <li>Adjust the strength with <strong>Amount</strong>.</li>
+    </ol>
+
+    <figure class="guide-fig">
+      <img src="../../assets/detail-pores.webp" width="1600" height="900" alt="Before and after on a close-up of skin with the Natural preset. The pores remain and the skin is lightly evened out" loading="lazy" decoding="async">
+      <figcaption class="cap">Cropped at 1:1 from the original resolution. The plugin output is not touched up. (The labels inside this image are in Japanese: the top line says the crop is at original resolution and is the plugin's output as is, and the headline says that Natural keeps the pores and evens the skin out lightly.)</figcaption>
+    </figure>
+
+    <p style="margin-top:18px">You can try this on your own footage with the free trial. It has every feature of the full version, and the only difference is a faint diagonal-stripe watermark on the video.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="../">Product page</a>
+    </div>
+
+    <h3>How it addresses the weak points of method 1</h3>
+    <ul>
+      <li>The smoothing keeps edges, so outlines, hair, eyebrows and eyelashes are not blurred.</li>
+      <li>It restores the fine texture that smoothing removes, so the skin is less likely to look painted.</li>
+      <li>It estimates the skin color automatically on every frame, so you do not have to pick the color again for each cut.</li>
+      <li><strong>Temporal Stability</strong> refers to neighboring frames to steady the skin detection, which reduces flicker in moving footage.</li>
+      <li>Shine, blemishes, redness and paleness can be adjusted with separate sliders when you need them.</li>
+    </ul>
+
+    <figure class="guide-fig">
+      <img src="../../assets/detail-edges.webp" width="1600" height="900" alt="Before and after on the eyebrow, glasses frame and eyelashes with the Standard preset. The outlines stay sharp" loading="lazy" decoding="async">
+      <figcaption class="cap">Standard (the default setting). The outlines of the eyebrow and the glasses frame stay sharp. (The labels inside this image are in Japanese: the headline says the glasses frame and the eyebrow outline are not blurred.)</figcaption>
+    </figure>
+
+    <figure class="guide-fig">
+      <a class="zoom" href="../../assets/presets.webp" target="_blank" rel="noopener"><img src="../../assets/presets.webp" width="1024" height="621" alt="Comparison of the original, Natural, Standard and Strong, with a cheek close-up in the bottom row" loading="lazy" decoding="async"></a>
+      <figcaption class="cap">From left: original, Natural, Standard, Strong. The bottom row is a cheek close-up. (The labels inside this image are in Japanese.)</figcaption>
+    </figure>
+
+    <h3>Limits</h3>
+    <p>The plugin finds skin by its color, so it can pick up a background whose color is close to skin. When that happens, turn on <strong>Show Mask</strong> to display the detected area in white, then narrow <strong>Hue Range</strong>. If several people are in the shot and you want to retouch only one of them, combine the plugin with a mask in Premiere Pro.</p>
+    <p>For how skin retouching looks in moving footage, see the <a href="https://vimeo.com/1213783495" rel="noopener">44-second demo video</a>. For every parameter and troubleshooting, see the <a href="../guide/">user guide</a>.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="requirements">
+  <div class="wrap guide-body">
+    <h2>System requirements</h2>
+    <ul>
+      <li>macOS 13 or later (Apple Silicon and Intel)</li>
+      <li>Windows 10 / 11 (64-bit, CPU processing)</li>
+      <li>Premiere Pro or After Effects 2025 or later (one plugin supports both)</li>
+    </ul>
+    <p data-win-beta>A free Windows beta is available until November 15, 2026. Get it from the <a href="https://booth.pm/en/items/9047647" rel="noopener">beta page on BOOTH</a>. The official Windows version will be released on November 16, 2026.</p>
+    <p data-win-official hidden>The official Windows version is available. It is included in the full version product, so one purchase covers both Mac and Windows.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="get">
+  <div class="wrap guide-body">
+    <h2>Where to get it</h2>
+    <p><strong>Free trial</strong> (every feature, with a faint diagonal-stripe watermark on the video)</p>
+    <p><strong>Full version</strong> (one-time purchase, &yen;9,800, about US$65)</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="https://booth.pm/en/items/8663073" rel="noopener">Buy the full version</a>
+    </div>
+    <p style="margin-top:18px">The <a href="../">product page</a> has the overview, comparison images and FAQ.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="summary">
+  <div class="wrap guide-body">
+    <h2>Summary</h2>
+    <ul>
+      <li>To try first, select the skin with HSL Secondary in Lumetri Color and set Sharpen to a negative value.</li>
+      <li>If the background gets blurred too, the outlines turn soft, the result flickers, or picking the color again for every cut is a chore, consider a plugin.</li>
+      <li>With either method: convert log footage first, keep some texture, and check at 100% zoom and against the footage before correction.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Product page</a>
+      <a href="../guide/">User guide</a>
+      <a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTH shop (totonoe-plugin)</a>
+      <a href="../../" hreflang="ja" lang="ja">日本語</a>
+    </div>
+    <p>Totonoe Skin Retouch is a skin retouch plugin for Premiere Pro and After Effects.</p>
+    <p>Adobe, Premiere Pro and After Effects are trademarks or registered trademarks of Adobe Inc. in the United States and other countries. This plugin is not provided or endorsed by Adobe.</p>
+    <p>This site uses Google Analytics to understand how it is visited. Google Analytics collects visit information with cookies, but the information does not identify individuals. <a href="https://policies.google.com/technologies/partner-sites?hl=en" rel="noopener">How Google uses data</a></p>
+  </div>
+</footer>
+<script src="../../assets/main.js" defer></script>
+</body>
+</html>
