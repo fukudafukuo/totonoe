@@ -6,6 +6,7 @@
 - 対応ソフト: Adobe Premiere Pro、After Effects（2025以降）
 - 対応OS: macOS 13以降、Windows 10／11（64bit、CPU処理）
 - エフェクト名: Skin Retouch
+- 処理: すべてパソコンの中で行う。映像を外部に送らず、インストール後はオフラインで使える
 
 ## 製品
 
@@ -34,4 +35,5 @@
 - [English user guide](https://fukudafukuo.github.io/totonoe/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
 - [Full version (BOOTH, English)](https://booth.pm/en/items/8663073)
 - [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
+- Processing: everything runs on your computer. Footage is never uploaded, and it works offline once installed
 - Support: send a message through BOOTH in English or Japanese
