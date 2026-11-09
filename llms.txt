@@ -35,6 +35,8 @@
 - [English user guide](https://fukudafukuo.github.io/totonoe/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
 - [How to retouch skin in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/): the built-in Lumetri Color (HSL Secondary) method step by step, its weak points, a plugin as the second method, and tips for a natural look
 - [Beauty Box alternative for Premiere Pro and After Effects](https://fukudafukuo.github.io/totonoe/en/beauty-box-alternative/): Totonoe Skin Retouch compared with Beauty Box Video on price, host apps, trial and features (vendor information checked Nov 8, 2026), and when each is the better choice
+- [How to retouch skin in After Effects](https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/): Bilateral Blur on a duplicated layer with a tracked face mask, its weak points, and a plugin as the second method
+- [How to reduce skin shine in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/): Lumetri Color HSL Secondary for shine across the face, a tracked mask for one hot spot, and the plugin's De-Shine control
 - [Full version (BOOTH, English)](https://booth.pm/en/items/8663073)
 - [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
 - Processing: everything runs on your computer. Footage is never uploaded, and it works offline once installed

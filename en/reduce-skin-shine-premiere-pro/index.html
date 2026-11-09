@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (GA4). The same measurement ID is also set in the BOOTH shop settings -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPGWX3PMB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPGWX3PMB1');
+</script>
+<!-- Adobe UI names checked 2026-11-09 (English help):
+  HSL Secondary (Key / Set color / Color/Gray / Refine: Denoise, Blur / Correction: Temperature, Tint, Contrast, Sharpen, Saturation)
+    https://helpx.adobe.com/premiere/desktop/correct-color/add-color-effects/correct-color-using-hsl-secondary-controls.html
+    (confirmed via search result of the English page; direct fetch returned 403)
+  Not confirmed on an English Adobe page, so written as plain descriptions: Basic Correction slider names, mask feather and tracker button names
+    https://helpx.adobe.com/premiere/desktop/correct-color/color-correction-fundamentals/basic-color-correction-options.html
+    https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/adjust-mask-properties.html
+    https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/track-masks.html
+  Source article (Japanese): docs/press/note_seo_shine.md
+-->
+<title>How to Reduce Skin Shine in Premiere Pro (Lumetri HSL Secondary and a Plugin)</title>
+<meta name="description" content="How to reduce shine on a face in Premiere Pro: a step-by-step Lumetri Color HSL Secondary method, a mask method for one hot spot, their limits, and a plugin with a De-Shine control.">
+<link rel="canonical" href="https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/">
+<meta name="theme-color" content="#0e0c1d">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Totonoe Skin Retouch">
+<meta property="og:title" content="How to Reduce Skin Shine in Premiere Pro (Lumetri HSL Secondary and a Plugin)">
+<meta property="og:description" content="A Lumetri Color HSL Secondary method, a mask method for one spot, their limits, and a plugin with a De-Shine control.">
+<meta property="og:url" content="https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/">
+<meta property="og:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Reduce Skin Shine in Premiere Pro">
+<meta name="twitter:description" content="HSL Secondary, a mask for one spot, and a plugin with De-Shine.">
+<meta name="twitter:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  .guide-body { max-width: 860px; }
+  .guide-body h2 { font-size: clamp(24px, 4.4vw, 32px); margin: 0 0 14px; }
+  .guide-body h3 { font-size: 19px; margin: 28px 0 10px; }
+  .guide-body p, .guide-body li { color: #d9d4ee; }
+  .guide-body ul, .guide-body ol { padding-left: 1.3em; margin: 0 0 16px; }
+  .guide-body li + li { margin-top: 6px; }
+  .guide-hero { padding: 40px 0 28px; background: linear-gradient(180deg, #120f26, var(--bg)); }
+  .guide-hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.4; margin: 0 0 12px; color: #fff; }
+  .guide-hero p { color: #d9d4ee; max-width: 720px; margin: 0 0 8px; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin: 24px 0 0; max-width: 720px; }
+  .toc h2 { font-size: 16px; margin: 0 0 8px; }
+  .toc ol { margin: 0; padding-left: 1.3em; columns: 2 240px; }
+  .toc li { margin: 0 0 4px; }
+  .toc a { color: var(--accent); }
+  .guide-sec { padding: 44px 0; scroll-margin-top: 64px; }
+  .guide-sec[id], .guide-body h3[id] { scroll-margin-top: 72px; }
+  .guide-fig { margin: 18px 0 0; max-width: 860px; }
+  .guide-fig img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "@id": "https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/#article",
+ "headline": "How to Reduce Skin Shine in Premiere Pro (Lumetri HSL Secondary and a Plugin)",
+ "description": "How to reduce shine on a face in Premiere Pro: a step-by-step Lumetri Color HSL Secondary method, a mask method for one hot spot, their limits, and a plugin with a De-Shine control.",
+ "url": "https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/",
+ "mainEntityOfPage": "https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/",
+ "inLanguage": "en",
+ "image": "https://fukudafukuo.github.io/totonoe/assets/ogp.jpg",
+ "datePublished": "2026-11-09",
+ "dateModified": "2026-11-09",
+ "about": {
+  "@type": "SoftwareApplication",
+  "@id": "https://fukudafukuo.github.io/totonoe/en/#software",
+  "name": "Totonoe Skin Retouch",
+  "url": "https://fukudafukuo.github.io/totonoe/en/"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can I remove skin shine in Premiere Pro without a plugin?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Select the bright skin with HSL Secondary in Lumetri Color and lower its lightness in the Correction section. For one small spot such as the tip of the nose, draw a mask on a second Lumetri Color effect and track it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does lowering Highlights or Whites not fix shine on a face?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Those sliders darken the bright parts of the whole frame, such as white clothes and walls, not only the shine on skin. To darken only the shine, select it first with HSL Secondary or a mask."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much De-Shine should I use in Totonoe Skin Retouch?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "De-Shine ranges from 0 to 100 and defaults to 0. Raise it only on the cuts that need it; the guide suggests staying at or below about 40. The Strong preset sets it to 25."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will it darken the shine on everyone in the shot?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The plugin finds skin by color, so everyone with a similar skin tone is affected. To limit the effect to one person, combine it with a mask in Premiere Pro."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">Totonoe<small>Skin Retouch</small></a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#answer">Short answer</a>
+      <a href="#hsl">HSL Secondary</a>
+      <a href="#mask">Mask</a>
+      <a href="#plugin">Plugin</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://booth.pm/en/items/8892910" rel="noopener">Free trial</a>
+    <a href="../../" hreflang="ja" lang="ja" style="margin-left:4px;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap">日本語</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="guide-hero" id="top">
+  <div class="wrap guide-body">
+    <h1>How to Reduce Skin Shine in Premiere Pro (Lumetri HSL Secondary and a Plugin)</h1>
+    <p>This article shows how to tone down shine on foreheads, noses and cheeks in Premiere Pro, first with the built-in tools and then with a plugin.</p>
+    <p>I am a video editor in Japan (music videos, interviews and commercials) and the developer of Totonoe Skin Retouch, the plugin in method 3.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#answer">Short answer</a></li>
+        <li><a href="#why">What shine looks like on camera</a></li>
+        <li><a href="#hsl">Method 1: HSL Secondary</a></li>
+        <li><a href="#mask">Method 2: A tracked mask for one spot</a></li>
+        <li><a href="#limits">Limits of methods 1 and 2</a></li>
+        <li><a href="#natural">Tips for a natural look</a></li>
+        <li><a href="#plugin">Method 3: A plugin with De-Shine</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="guide-sec" id="answer">
+  <div class="wrap guide-body">
+    <h2>Short answer</h2>
+    <p>For shine across a face, use <strong>HSL Secondary</strong> in Lumetri Color to select only the bright skin, then lower its lightness a little. For one spot, such as the tip of the nose, draw a mask on a second Lumetri Color effect and track it.</p>
+    <p>If you have many cuts, a skin retouch plugin with a De-Shine control is faster, because it does not need a new selection for every shot.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="why">
+  <div class="wrap guide-body">
+    <h2>What shine looks like on camera</h2>
+    <p>Shine is light reflecting off oil or sweat on the surface of the skin. In video it appears as an area that is brighter than the surrounding skin and also paler in color.</p>
+    <p>A fix therefore needs two things: lower the brightness, and bring back a little of the skin color that was washed out. Lowering the highlights or whites in Basic Correction would also darken white clothing and walls, so select the skin first.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="hsl">
+  <div class="wrap guide-body">
+    <h2>Method 1: Select bright skin with HSL Secondary and darken it</h2>
+    <ol>
+      <li>Select the clip and open the <strong>Lumetri Color</strong> panel (Window &gt; Lumetri Color). Click <strong>HSL Secondary</strong> to open it.</li>
+      <li>In <strong>Key</strong>, use the <strong>Set color</strong> eyedropper and click the shiny area.</li>
+      <li>Check <strong>Color/Gray</strong> to see the selection. Gray areas are not selected. If the selection spreads past the shine, narrow the <strong>L</strong> slider toward the bright side.</li>
+      <li>In <strong>Refine</strong>, raise <strong>Denoise</strong> and <strong>Blur</strong> to blend the edge of the selection. Shine has a soft edge, so a hard selection edge makes the corrected area look pasted on.</li>
+      <li>Uncheck <strong>Color/Gray</strong>. Under <strong>Correction</strong>, pull the vertical slider next to the color wheel down a little to darken the selection. If it still looks pale, raise <strong>Saturation</strong> slightly to bring the skin color back.</li>
+      <li>Compare with the footage before correction.</li>
+    </ol>
+    <p>Darkening too far turns the shiny area gray and dull, so stop while a little shine remains.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="mask">
+  <div class="wrap guide-body">
+    <h2>Method 2: Draw a mask around one spot and track it</h2>
+    <p>If only the tip of the nose or part of the forehead is shiny, darkening just that area is quicker.</p>
+    <ol>
+      <li>Add a second Lumetri Color effect to the same clip, from the menu at the top of the Lumetri Color panel. Keeping it separate from your color correction means that correction stays as it is outside the mask.</li>
+      <li>With the new Lumetri Color effect selected, use the ellipse mask tool and draw around the shiny area in the Program Monitor. In Premiere Pro 2026 the mask-creation tools are in the Tools panel, not in buttons under the effect in Effect Controls.</li>
+      <li>In Effect Controls, raise the mask feather so the edge blends. The default is 0, so the edge shows until you raise it.</li>
+      <li>Click the tracker button that tracks the selected mask forward and backward.</li>
+      <li>In the second Lumetri Color's Basic Correction, lower the highlights or the exposure. Only the inside of the mask gets darker.</li>
+    </ol>
+    <p>If the mask drifts when the head turns, fix its position on that frame and track again from there.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="limits">
+  <div class="wrap guide-body">
+    <h2>Limits of methods 1 and 2</h2>
+    <ul>
+      <li>White clothing, white walls and reflections of lights are bright and pale as well, so they are easily selected together with the shine.</li>
+      <li>The position and size of shine change with head angle and lighting, so the selection can fluctuate, the correction can flicker, and masks drift.</li>
+      <li>You have to redo the eyedropper selection or the mask whenever the shot or the lighting changes.</li>
+    </ul>
+    <p>The general skin smoothing version of this method is in <a href="../premiere-pro-skin-retouch/">How to Retouch Skin in Premiere Pro</a>.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="natural">
+  <div class="wrap guide-body">
+    <h2>Tips for a natural look</h2>
+    <ul>
+      <li>Do not remove all of the shine. The highlights on the nose bridge and cheekbones give the face its shape, and removing them makes the face look flat.</li>
+      <li>For log footage, apply a color conversion first (for example a Rec.709 LUT). In log, brightness and color are hard to judge.</li>
+      <li>Check at 100% zoom, compare with the footage before correction, and do the final check on the exported video.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="guide-sec" id="plugin">
+  <div class="wrap guide-body">
+    <h2>Method 3: Reduce shine with a plugin (De-Shine)</h2>
+    <p><strong>Totonoe Skin Retouch</strong> has a <strong>De-Shine</strong> slider that reduces shine and highlights on skin. It is a one-time purchase of &yen;9,800 (about US$65) on BOOTH and works in Premiere Pro and After Effects 2025 or later.</p>
+    <ol>
+      <li>Apply the effect <strong>Skin Retouch</strong> to the clip. Skin is detected automatically.</li>
+      <li>Raise <strong>De-Shine</strong> in Effect Controls. It ranges from 0 to 100 and defaults to 0. Use it only on the cuts that need it, and stay at or below about 40.</li>
+    </ol>
+    <p>If both shine and blemishes are visible, choose the <strong>Strong</strong> preset, which also sets De-Shine to 25, then adjust De-Shine alone.</p>
+
+    <figure class="guide-fig">
+      <a class="zoom" href="../../assets/presets.webp" target="_blank" rel="noopener"><img src="../../assets/presets.webp" width="1024" height="621" alt="Comparison of the original, Natural, Standard and Strong presets, with a cheek close-up in the bottom row" loading="lazy" decoding="async"></a>
+      <figcaption class="cap">From left: original, Natural, Standard, Strong. The bottom row is a cheek close-up. Strong is the preset that also sets De-Shine. (The labels inside this image are in Japanese.)</figcaption>
+    </figure>
+
+    <p style="margin-top:18px">You can try De-Shine on your own footage with the free trial. It has every feature of the full version; the only difference is a faint diagonal-stripe watermark on the video.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial (Mac)</a>
+      <a class="btn btn-ghost" href="https://booth.pm/en/items/8663073" rel="noopener">Buy the full version</a>
+    </div>
+
+    <h3>How it differs from methods 1 and 2</h3>
+    <ul>
+      <li>It works only inside the area detected as skin, and it darkens skin that is brighter than its surroundings. Skin without shine barely changes.</li>
+      <li>It detects skin on every frame, so you do not redo a selection or mask for each cut.</li>
+      <li>The smoothing keeps edges (eyes, brows, lashes and hair stay sharp), <strong>Texture</strong> adds back fine pore texture, and <strong>Temporal Stability</strong> steadies the skin detection in moving shots.</li>
+    </ul>
+
+    <h3>Limits</h3>
+    <p>The plugin detects skin by color, so everyone with a similar skin tone in the shot is retouched. To limit it to one person, combine it with a mask in Premiere Pro. If it picks up a background with a skin-like color, turn on <strong>Show Mask</strong> and narrow <strong>Hue Range</strong>. Log footage needs a Rec.709 conversion before the effect. It does not run in DaVinci Resolve, Final Cut Pro or Avid.</p>
+    <p>Everything is processed on your computer. Your footage is never sent to a server, and the plugin works offline after installation. It runs on Mac (macOS 13 or later, Apple Silicon and Intel) and, from November 16, 2026, on Windows (CPU only). For all parameters, see the <a href="../guide/">user guide</a>, and for a comparison with another well-known plugin, see <a href="../beauty-box-alternative/">Beauty Box Alternative for Premiere Pro and After Effects</a>.</p>
+    <p data-win-beta>Windows support is added to the product on November 16, 2026, at no extra cost for existing buyers. Until November 15, 2026 a free Windows beta is available on the <a href="https://booth.pm/en/items/9047647" rel="noopener">beta page on BOOTH</a>.</p>
+    <!-- remove the data-win-beta line above after 2026-11-16 -->
+  </div>
+</section>
+
+<section class="guide-sec alt" id="faq">
+  <div class="wrap guide-body">
+    <h2>FAQ</h2>
+    <h3>Can I remove skin shine in Premiere Pro without a plugin?</h3>
+    <p>Yes. Select the bright skin with HSL Secondary in Lumetri Color and lower its lightness in the Correction section. For one small spot such as the tip of the nose, draw a mask on a second Lumetri Color effect and track it.</p>
+    <h3>Why does lowering Highlights or Whites not fix shine on a face?</h3>
+    <p>Those sliders darken the bright parts of the whole frame, such as white clothes and walls, not only the shine on skin. To darken only the shine, select it first with HSL Secondary or a mask.</p>
+    <h3>How much De-Shine should I use in Totonoe Skin Retouch?</h3>
+    <p>De-Shine ranges from 0 to 100 and defaults to 0. Raise it only on the cuts that need it; the guide suggests staying at or below about 40. The Strong preset sets it to 25.</p>
+    <h3>Will it darken the shine on everyone in the shot?</h3>
+    <p>The plugin finds skin by color, so everyone with a similar skin tone is affected. To limit the effect to one person, combine it with a mask in Premiere Pro.</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Product page</a>
+      <a href="../guide/">User guide</a>
+      <a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTH shop (totonoe-plugin)</a>
+      <a href="../../" hreflang="ja" lang="ja">日本語</a>
+    </div>
+    <p>Totonoe Skin Retouch is a skin retouch plugin for Premiere Pro and After Effects.</p>
+    <p>Adobe, Premiere Pro and After Effects are trademarks or registered trademarks of Adobe Inc. in the United States and other countries. This plugin is not provided or endorsed by Adobe.</p>
+    <p>This site uses Google Analytics to understand how it is visited. Google Analytics collects visit information with cookies, but the information does not identify individuals. <a href="https://policies.google.com/technologies/partner-sites?hl=en" rel="noopener">How Google uses data</a></p>
+  </div>
+</footer>
+<script src="../../assets/main.js" defer></script>
+</body>
+</html>

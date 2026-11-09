@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (GA4). The same measurement ID is also set in the BOOTH shop settings -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPGWX3PMB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPGWX3PMB1');
+</script>
+<!--
+Adobe English help pages checked 2026-11-09 for After Effects UI names:
+- https://helpx.adobe.com/after-effects/desktop/apply-effects-and-animation-presets/list-of-effects/blur-sharpen-effects.html : Effect > Blur & Sharpen; Bilateral Blur (properties Threshold, Radius, Colorize; works with 8/16/32 bpc); Gaussian Blur; Window > Effects & Presets
+- https://helpx.adobe.com/after-effects/desktop/animate-in-after-effects/track-mask/rigid-mask-tracking.html : Animation > Track Mask; Tracker panel Method menu "Position, Scale & Rotation" and "Face Tracking (Outline Only)"; "Track selected masks forward"; Mask Tracker not available on Adjustment layers; fix drift by correcting the mask and re-running
+- https://helpx.adobe.com/after-effects/desktop/drawing-painting-and-paths/work-with-masks/create-masks.html : Ellipse and Pen tools; Subtract mask mode
+Not confirmed on an English Adobe page, so described without quoting a UI label: the mask feather property name, the layer Opacity property, duplicating a layer.
+Windows beta paragraph: remove the data-win-beta line after 2026-11-16 (main.js hides it automatically).
+-->
+<title>How to Retouch Skin in After Effects: Built-in Effects and a Plugin</title>
+<meta name="description" content="How to smooth and retouch skin in After Effects. A step-by-step method with Bilateral Blur, a mask and mask tracking, its weak points, a skin retouch plugin as the second method, and tips for a natural result.">
+<link rel="canonical" href="https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/">
+<meta name="theme-color" content="#0e0c1d">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Totonoe Skin Retouch">
+<meta property="og:title" content="How to Retouch Skin in After Effects: Built-in Effects and a Plugin">
+<meta property="og:description" content="A step-by-step skin smoothing method with Bilateral Blur and a tracked mask, its weak points, a plugin as the second method, and tips for a natural look.">
+<meta property="og:url" content="https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/">
+<meta property="og:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Retouch Skin in After Effects">
+<meta name="twitter:description" content="Built-in Bilateral Blur and mask tracking, their weak points, a plugin as the second method, and tips for a natural look.">
+<meta name="twitter:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  .guide-body { max-width: 860px; }
+  .guide-body h2 { font-size: clamp(24px, 4.4vw, 32px); margin: 0 0 14px; }
+  .guide-body h3 { font-size: 19px; margin: 28px 0 10px; }
+  .guide-body p, .guide-body li { color: #d9d4ee; }
+  .guide-body ul, .guide-body ol { padding-left: 1.3em; margin: 0 0 16px; }
+  .guide-body li + li { margin-top: 6px; }
+  .guide-hero { padding: 40px 0 28px; background: linear-gradient(180deg, #120f26, var(--bg)); }
+  .guide-hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.4; margin: 0 0 12px; color: #fff; }
+  .guide-hero p { color: #d9d4ee; max-width: 720px; margin: 0 0 8px; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin: 24px 0 0; max-width: 720px; }
+  .toc h2 { font-size: 16px; margin: 0 0 8px; }
+  .toc ol { margin: 0; padding-left: 1.3em; columns: 2 240px; }
+  .toc li { margin: 0 0 4px; }
+  .toc a { color: var(--accent); }
+  .guide-sec { padding: 44px 0; scroll-margin-top: 64px; }
+  .guide-sec[id], .guide-body h3[id] { scroll-margin-top: 72px; }
+  .guide-fig { margin: 18px 0 0; max-width: 860px; }
+  .guide-fig img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "@id": "https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/#article",
+ "headline": "How to Retouch Skin in After Effects: Built-in Effects and a Plugin",
+ "description": "How to smooth and retouch skin in After Effects. A step-by-step method with Bilateral Blur, a mask and mask tracking, its weak points, a skin retouch plugin as the second method, and tips for a natural result.",
+ "url": "https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/",
+ "mainEntityOfPage": "https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/",
+ "inLanguage": "en",
+ "image": "https://fukudafukuo.github.io/totonoe/assets/ogp.jpg",
+ "datePublished": "2026-11-09",
+ "dateModified": "2026-11-09",
+ "about": {
+  "@type": "SoftwareApplication",
+  "@id": "https://fukudafukuo.github.io/totonoe/en/#software",
+  "name": "Totonoe Skin Retouch",
+  "url": "https://fukudafukuo.github.io/totonoe/en/"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the easiest way to smooth skin in After Effects?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Duplicate the layer, draw a face mask on the top copy, apply Bilateral Blur, and lower the top layer's opacity. Bilateral Blur keeps high-contrast edges such as the eyes while it softens low-contrast skin."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why use Bilateral Blur instead of Gaussian Blur for skin?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gaussian Blur softens outlines and skin equally. Bilateral Blur blurs high-contrast areas less, so eyes and brows stay sharper while skin evens out."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Totonoe Skin Retouch work in After Effects?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. It supports After Effects and Premiere Pro 2025 or later, in 8, 16 and 32-bit projects. On Mac it uses the Metal GPU, and on Windows it runs on the CPU."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to mask and track the face with the plugin?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. The plugin detects skin by color on every frame, so one effect on one layer is enough. If several people are in the shot and you want to retouch only one, limit the effect with an After Effects mask."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the plugin send my footage anywhere?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. All processing runs on your computer, footage is never uploaded, and the plugin works offline after installation."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">Totonoe<small>Skin Retouch</small></a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#answer">Short answer</a>
+      <a href="#built-in">Built-in method</a>
+      <a href="#natural">Natural look</a>
+      <a href="#plugin">Plugin</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://booth.pm/en/items/8892910" rel="noopener">Free trial</a>
+    <a href="../../" hreflang="ja" lang="ja" style="margin-left:4px;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap">日本語</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="guide-hero" id="top">
+  <div class="wrap guide-body">
+    <h1>How to Retouch Skin in After Effects: Built-in Effects and a Plugin</h1>
+    <p>This article covers two ways to smooth skin in After Effects: using only the built-in effects, and using a plugin.</p>
+    <p>I am a video editor in Japan (music videos, interviews and commercials), and I retouch skin as a regular part of that work. I also develop Totonoe Skin Retouch, the plugin described in method 2. In Premiere Pro? See <a href="../premiere-pro-skin-retouch/">the Premiere Pro version</a>.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#answer">Short answer</a></li>
+        <li><a href="#built-in">Method 1: Bilateral Blur, a mask and tracking</a></li>
+        <li><a href="#weak-points">Weak points of method 1</a></li>
+        <li><a href="#natural">Tips for a natural look</a></li>
+        <li><a href="#plugin">Method 2: A skin retouch plugin</a></li>
+        <li><a href="#get">Requirements and where to get it</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="guide-sec" id="answer">
+  <div class="wrap guide-body">
+    <h2>Short answer</h2>
+    <p>To retouch skin in After Effects without extra software, duplicate the layer, apply <strong>Bilateral Blur</strong> to the top copy, limit it to the face with a mask, and lower the top layer's opacity. Bilateral Blur blurs low-contrast skin while it keeps high-contrast edges such as the eyes.</p>
+    <p>If you have many cuts, or the masking and tracking take too long, a skin retouch plugin does the same job with one effect on one layer.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="built-in">
+  <div class="wrap guide-body">
+    <h2>Method 1: Duplicate the layer and apply Bilateral Blur</h2>
+    <p>Use <strong>Bilateral Blur</strong> instead of <strong>Gaussian Blur</strong>. Gaussian Blur softens outlines and skin equally. Adobe describes it as blurring high-contrast areas less, so edges and details are preserved. It works in 8, 16 and 32-bit projects.</p>
+    <ol>
+      <li>Select the layer and duplicate it. The top copy is the retouch layer, so rename it, for example to "skin".</li>
+      <li>On the top layer, draw a mask around the face with the <strong>Ellipse</strong> tool. Draw further masks around the eyes and mouth (and the eyebrows if they are visible), and set those masks to <strong>Subtract</strong> in the Timeline panel. Use the <strong>Pen</strong> tool if you need a shape that follows the face more closely.</li>
+      <li>Make the mask follow the face. Select the face mask and choose <strong>Animation &gt; Track Mask</strong> to show the Tracker panel. In the <strong>Method</strong> menu, choose <strong>Face Tracking (Outline Only)</strong>, then click <strong>Track selected masks forward</strong>. For the eye and mouth masks, use <strong>Position, Scale &amp; Rotation</strong>. If the mask drifts, correct its shape at that frame and run the tracker again from there.</li>
+      <li>Raise the feather of the face mask until the border between the retouched and untouched areas is no longer visible.</li>
+      <li>Apply <strong>Effect &gt; Blur &amp; Sharpen &gt; Bilateral Blur</strong> to the top layer. Keep <strong>Colorize</strong> on. With it off, the effect works on luminance only and the result is monochrome.</li>
+      <li>Adjust <strong>Radius</strong> and <strong>Threshold</strong>. A larger Radius blurs more, and a lower Threshold preserves more fine detail. I used Radius 12 and Threshold 8.</li>
+      <li>Lower the <strong>opacity</strong> of the top layer so the texture of the layer below shows through. Try 50 to 70% first. I used 60% on a cheek close-up.</li>
+    </ol>
+
+    <h3 id="weak-points">Weak points of method 1</h3>
+    <ul>
+      <li>The mask only sets a shape, so hair, a beard or background inside the mask is blurred too.</li>
+      <li>At a strong setting, even Bilateral Blur makes the skin uniform and gives it a painted look.</li>
+      <li>When the face turns far to the side or a hand covers it, the tracking drifts and you have to correct the mask by hand.</li>
+      <li>Each cut needs its own duplicate layer, masks and tracking.</li>
+    </ul>
+    <p>For a few short cuts this is enough. For an interview with dozens of cuts of the same person, the extra work adds up.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="natural">
+  <div class="wrap guide-body">
+    <h2>Tips for a natural look (both methods)</h2>
+    <ul>
+      <li>For log footage, apply a color conversion first (for example a Rec.709 LUT), then retouch the skin. In log, skin color is hard to judge.</li>
+      <li>Do not remove all of the pores and skin texture. Skin looks more natural when some texture remains.</li>
+      <li>Set the Composition panel to 100% zoom when you check. At a reduced zoom it is hard to notice when you have gone too far.</li>
+      <li>Do the final check on the exported video.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="plugin">
+  <div class="wrap guide-body">
+    <h2>Method 2: Use a skin retouch plugin</h2>
+    <p>I made <strong>Totonoe Skin Retouch</strong> for my own projects, to avoid rebuilding the duplicate layer, masks and tracking for every cut. It is sold on BOOTH as a one-time purchase of &yen;9,800 (about US$65), and there is a free trial with the same features as the full version.</p>
+    <p>In After Effects, search for "Skin Retouch" in the <strong>Effects &amp; Presets</strong> panel (Window &gt; Effects &amp; Presets) and apply it to the layer.</p>
+
+    <h3>Three steps</h3>
+    <ol>
+      <li>Apply the effect <strong>Skin Retouch</strong> to a layer. Skin is detected automatically the moment you apply it.</li>
+      <li>Choose a <strong>Preset</strong> (Natural, Standard or Strong).</li>
+      <li>Adjust the strength with <strong>Amount</strong>.</li>
+    </ol>
+
+    <figure class="guide-fig">
+      <img src="../../assets/detail-pores.webp" width="1600" height="900" alt="Before and after on a close-up of skin with the Natural preset. The pores remain and the skin is lightly evened out" loading="lazy" decoding="async">
+      <figcaption class="cap">Cropped at 1:1 from the original resolution. The plugin output is not touched up. (The labels inside this image are in Japanese: the top line says the crop is at original resolution and is the plugin's output as is, and the headline says that Natural keeps the pores and evens the skin out lightly.)</figcaption>
+    </figure>
+
+    <p style="margin-top:18px">You can try this on your own footage with the free trial. It has every feature of the full version, and the only difference is a faint diagonal-stripe watermark on the video.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="../">Product page</a>
+    </div>
+
+    <h3>How it differs from method 1</h3>
+    <ul>
+      <li>It detects skin by color on every frame, so you do not need a duplicate layer, masks or tracking. One effect on one layer is enough.</li>
+      <li>The smoothing is edge-preserving (a guided filter), so eyes, eyebrows, eyelashes and hair edges stay sharp.</li>
+      <li><strong>Texture</strong> adds back fine pore texture, so the skin is less likely to look painted.</li>
+      <li><strong>Temporal Stability</strong> refers to neighboring frames to steady the detection in moving shots.</li>
+      <li><strong>De-Shine</strong> and <strong>Blemish</strong> controls are in the same effect, and <strong>Compare</strong> shows the original.</li>
+    </ul>
+
+    <figure class="guide-fig">
+      <img src="../../assets/detail-edges.webp" width="1600" height="900" alt="Before and after on the eyebrow, glasses frame and eyelashes with the Standard preset. The outlines stay sharp" loading="lazy" decoding="async">
+      <figcaption class="cap">Standard (the default setting). The outlines of the eyebrow and the glasses frame stay sharp. (The labels inside this image are in Japanese: the headline says the glasses frame and the eyebrow outline are not blurred.)</figcaption>
+    </figure>
+
+    <figure class="guide-fig">
+      <a class="zoom" href="../../assets/presets.webp" target="_blank" rel="noopener"><img src="../../assets/presets.webp" width="1024" height="621" alt="Comparison of the original, Natural, Standard and Strong, with a cheek close-up in the bottom row" loading="lazy" decoding="async"></a>
+      <figcaption class="cap">From left: original, Natural, Standard, Strong. The bottom row is a cheek close-up. (The labels inside this image are in Japanese.)</figcaption>
+    </figure>
+
+    <h3>Limits</h3>
+    <p>The plugin finds skin by its color, so everyone in the shot with a similar skin tone is retouched, and a background close to skin color can be picked up. If that happens, turn on <strong>Show Mask</strong> to see the detected area in white and narrow <strong>Hue Range</strong>. To retouch only one person, combine the plugin with an After Effects mask. Log footage needs a Rec.709 conversion before the effect. It works only in Premiere Pro and After Effects, not in DaVinci Resolve, Final Cut Pro or Avid.</p>
+    <p>All processing runs on your computer. Footage is never sent to a server, and the plugin works offline after installation. See the <a href="../guide/">user guide</a> for every parameter, and <a href="../beauty-box-alternative/">this article</a> for a comparison with another paid plugin.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="get">
+  <div class="wrap guide-body">
+    <h2>Requirements and where to get it</h2>
+    <ul>
+      <li>After Effects or Premiere Pro 2025 or later (one plugin supports both), 8/16/32-bit</li>
+      <li>Mac: Apple Silicon and Intel, macOS 13 or later, Metal GPU</li>
+      <li>Windows: CPU processing only. Windows support is added to the product on November 16, 2026, and existing buyers get it at no extra cost.</li>
+    </ul>
+    <p data-win-beta>A free Windows beta is available until November 15, 2026. Get it from the <a href="https://booth.pm/en/items/9047647" rel="noopener">beta page on BOOTH</a>.</p>
+    <!-- remove the data-win-beta line above after 2026-11-16 -->
+    <p><strong>Free trial</strong> (Mac, every feature, with a faint diagonal-stripe watermark on the video)</p>
+    <p><strong>Full version</strong> (one-time purchase, &yen;9,800, about US$65)</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="https://booth.pm/en/items/8663073" rel="noopener">Buy the full version</a>
+    </div>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="faq">
+  <div class="wrap guide-body">
+    <h2>FAQ</h2>
+    <h3>What is the easiest way to smooth skin in After Effects?</h3>
+    <p>Duplicate the layer, draw a face mask on the top copy, apply Bilateral Blur, and lower the top layer's opacity. Bilateral Blur keeps high-contrast edges such as the eyes while it softens low-contrast skin.</p>
+    <h3>Why use Bilateral Blur instead of Gaussian Blur for skin?</h3>
+    <p>Gaussian Blur softens outlines and skin equally. Bilateral Blur blurs high-contrast areas less, so eyes and brows stay sharper while skin evens out.</p>
+    <h3>Does Totonoe Skin Retouch work in After Effects?</h3>
+    <p>Yes. It supports After Effects and Premiere Pro 2025 or later, in 8, 16 and 32-bit projects. On Mac it uses the Metal GPU, and on Windows it runs on the CPU.</p>
+    <h3>Do I need to mask and track the face with the plugin?</h3>
+    <p>No. The plugin detects skin by color on every frame, so one effect on one layer is enough. If several people are in the shot and you want to retouch only one, limit the effect with an After Effects mask.</p>
+    <h3>Does the plugin send my footage anywhere?</h3>
+    <p>No. All processing runs on your computer, footage is never uploaded, and the plugin works offline after installation.</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Product page</a>
+      <a href="../guide/">User guide</a>
+      <a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTH shop (totonoe-plugin)</a>
+      <a href="../../" hreflang="ja" lang="ja">日本語</a>
+    </div>
+    <p>Totonoe Skin Retouch is a skin retouch plugin for Premiere Pro and After Effects.</p>
+    <p>Adobe, Premiere Pro and After Effects are trademarks or registered trademarks of Adobe Inc. in the United States and other countries. This plugin is not provided or endorsed by Adobe.</p>
+    <p>This site uses Google Analytics to understand how it is visited. Google Analytics collects visit information with cookies, but the information does not identify individuals. <a href="https://policies.google.com/technologies/partner-sites?hl=en" rel="noopener">How Google uses data</a></p>
+  </div>
+</footer>
+<script src="../../assets/main.js" defer></script>
+</body>
+</html>
