@@ -169,16 +169,24 @@ var PERIODS = [
     select(0);
   }
 
-  /* ---------- Vimeo(クリックで読み込む軽量埋め込み) ---------- */
+  /* ---------- Vimeo / YouTube(クリックで読み込む軽量埋め込み) ---------- */
   function initVideo(a) {
     a.addEventListener('click', function (e) {
       if (e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault();
-      var id = a.getAttribute('data-vimeo');
+      if (a.querySelector('iframe')) return;
+      var yt = a.getAttribute('data-youtube');
       var f = document.createElement('iframe');
-      f.src = 'https://player.vimeo.com/video/' + id + '?autoplay=1&dnt=1';
-      f.title = document.documentElement.lang === 'en' ? 'Totonoe Skin Retouch demo video' : 'Totonoe Skin Retouch デモ動画';
-      f.allow = 'autoplay; fullscreen; picture-in-picture';
+      if (yt) {
+        f.src = 'https://www.youtube-nocookie.com/embed/' + yt + '?autoplay=1&rel=0';
+        f.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+      } else {
+        f.src = 'https://player.vimeo.com/video/' + a.getAttribute('data-vimeo') + '?autoplay=1&dnt=1';
+        f.allow = 'autoplay; fullscreen; picture-in-picture';
+      }
+      f.title = a.getAttribute('data-title') ||
+        (document.documentElement.lang === 'en' ? 'Totonoe Skin Retouch demo video' : 'Totonoe Skin Retouch デモ動画');
+      f.allowFullscreen = true;
       f.referrerPolicy = 'strict-origin-when-cross-origin';
       a.appendChild(f);
       f.focus();
@@ -191,7 +199,7 @@ var PERIODS = [
     for (var i = 0; i < cmp.length; i++) initSlider(cmp[i]);
     var tabs = document.querySelector('[data-tabs]');
     if (tabs) initTabs(tabs);
-    var v = document.querySelector('[data-vimeo]');
-    if (v) initVideo(v);
+    var vids = document.querySelectorAll('[data-vimeo], [data-youtube]');
+    for (var k = 0; k < vids.length; k++) initVideo(vids[k]);
   });
 })();
