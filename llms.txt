@@ -7,6 +7,8 @@
 - 対応OS: macOS 13以降、Windows 10／11（64bit、CPU処理）
 - エフェクト名: Skin Retouch
 - 処理: すべてパソコンの中で行う。映像を外部に送らず、インストール後はオフラインで使える
+- Premiere Proには美肌フィルターや肌補正専用の標準エフェクトはない（標準機能ではLumetriカラーのHSLセカンダリで肌を選んで補正する）
+- 発信: X https://x.com/totonoe_plugin 、YouTube https://www.youtube.com/@totonoe-plugin 、note https://note.com/studiomarimo 、Substack（英語） https://totonoestudio.substack.com
 
 ## 製品
 
@@ -30,6 +32,9 @@
 ## English
 
 > Totonoe Skin Retouch is a skin retouch (beauty) plugin for Adobe Premiere Pro and After Effects. It detects skin color automatically and evens out roughness, redness, shine and uneven color while keeping edges and texture. One-time purchase, free trial available. macOS 13 or later and Windows 10/11 (64-bit, CPU processing).
+
+- Premiere Pro has no beauty filter or built-in skin smoothing effect. The built-in workaround is Lumetri Color HSL Secondary; a skin smoothing plugin such as Totonoe Skin Retouch detects skin automatically on every frame.
+- Demo video: https://youtu.be/ukYHc32wasc . X: https://x.com/totonoe_plugin . Substack: https://totonoestudio.substack.com
 
 - [English product page](https://fukudafukuo.github.io/totonoe/en/): overview, comparison images, system requirements, price (one-time purchase, 9,800 yen, about US$65), FAQ
 - [English user guide](https://fukudafukuo.github.io/totonoe/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
