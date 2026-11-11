@@ -56,6 +56,23 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can a LUT smooth skin in Premiere Pro?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. A LUT changes color, not detail: each pixel gets a new color looked up from its own RGB values, so a LUT cannot soften pores or fine texture, which needs the values of neighboring pixels. A LUT can warm or cool skin tone, reduce reds, or lower contrast. To smooth skin, use a negative Sharpen inside a Lumetri HSL Secondary selection or a skin retouch plugin."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
  "@type": "Article",
  "@id": "https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/#article",
  "headline": "How to Retouch Skin in Premiere Pro: The Built-in Lumetri Method and a Plugin",
@@ -65,7 +82,7 @@
  "inLanguage": "en",
  "image": "https://fukudafukuo.github.io/totonoe/assets/ogp.jpg",
  "datePublished": "2026-11-08",
- "dateModified": "2026-11-08",
+ "dateModified": "2026-11-11",
  "about": {
   "@type": "SoftwareApplication",
   "@id": "https://fukudafukuo.github.io/totonoe/en/#software",
@@ -118,6 +135,7 @@
         <li><a href="#lumetri">Method 1: Lumetri Color (HSL Secondary)</a></li>
         <li><a href="#weak-points">Weak points of method 1</a></li>
         <li><a href="#natural">Tips for a natural look</a></li>
+        <li><a href="#lut">Can a LUT smooth skin?</a></li>
         <li><a href="#plugin">Method 2: A skin retouch plugin</a></li>
         <li><a href="#requirements">System requirements</a></li>
         <li><a href="#get">Where to get it</a></li>
@@ -174,6 +192,20 @@
       <li>Compare with the footage before correction. As your eyes get used to the result, you tend to apply more and more.</li>
       <li>Do the final check on the exported video.</li>
     </ul>
+  </div>
+</section>
+
+<section class="guide-sec" id="lut">
+  <div class="wrap guide-body">
+    <h2>Can a LUT smooth skin?</h2>
+    <p>No. A LUT (look-up table) changes color, not detail. Adobe describes LUTs in Premiere Pro as a way to manipulate saturation and contrast or to change the color of a clip (<a href="https://helpx.adobe.com/premiere/desktop/correct-color/add-color-effects/add-look-up-tables.html" rel="noopener">Adobe: Add Look-up Tables</a>). A 3D LUT gives each pixel a new color looked up from that pixel's own RGB values (<a href="https://en.wikipedia.org/wiki/3D_lookup_table" rel="noopener">3D lookup table</a>). Smoothing skin needs the values of neighboring pixels, as a blur does, so a LUT cannot soften pores or fine texture.</p>
+    <p>What a LUT can do for skin:</p>
+    <ul>
+      <li>Warm up or cool down the overall skin tone</li>
+      <li>Reduce the saturation of reds</li>
+      <li>Lower contrast or lift brightness, which can make texture a little less visible</li>
+    </ul>
+    <p>A LUT changes every pixel that has the same color, so a background or clothing in skin-like colors changes too. To smooth the skin itself, use a blur-based method such as method 1 above (a negative Sharpen inside an HSL Secondary selection) or a skin retouch plugin. You can still use a LUT for the color grade before or after the skin retouch.</p>
   </div>
 </section>
 
