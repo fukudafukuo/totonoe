@@ -110,6 +110,10 @@ figure { margin: 0; }
 .price-line { margin: 22px 0 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
 .price-line .label { color: var(--muted); font-size: 14px; }
 .price-note { color: var(--muted); font-size: 13px; line-height: 1.7; margin-top: 14px; max-width: 560px; }
+.host-note { color: var(--muted); font-size: 13px; line-height: 1.7; margin-top: 14px; max-width: 560px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+.host-note strong { color: var(--text); }
+#resolve .hint, #pricing .wrap > .hint { color: var(--muted); font-size: 13px; margin: 14px 0 0; line-height: 1.7; }
+#resolve .btn-row { margin-top: 24px; }
 .chip {
   display: inline-block; font-size: 13px; padding: 4px 12px; border-radius: 999px;
   background: var(--surface-2); border: 1px solid var(--line); color: #ddd8f2; margin-top: 16px;

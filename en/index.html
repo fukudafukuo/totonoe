@@ -97,6 +97,38 @@
    ]
   },
   {
+   "@type": "SoftwareApplication",
+   "@id": "https://fukudafukuo.github.io/totonoe/en/#software-resolve",
+   "name": "Totonoe Skin Retouch for DaVinci Resolve",
+   "applicationCategory": "MultimediaApplication",
+   "applicationSubCategory": "Skin retouch plugin for DaVinci Resolve (OpenFX)",
+   "operatingSystem": "macOS",
+   "softwareRequirements": "DaVinci Resolve (free version 20.3.2 checked on a Mac with Apple Silicon; Studio and Resolve 21 not checked). Windows is not supported",
+   "description": "Skin retouch plugin for DaVinci Resolve (OpenFX). Mac only; Windows is not supported. It detects skin color automatically and evens out roughness and redness while keeping edges and texture. It does not run in Premiere Pro or After Effects, which have a separate product. One-time purchase, free trial available.",
+   "url": "https://fukudafukuo.github.io/totonoe/en/#resolve",
+   "inLanguage": "en",
+   "featureList": [
+    "Automatic skin color detection",
+    "Edge-preserving skin smoothing with texture restoration",
+    "Shine reduction (De-Shine)",
+    "Small blemish and acne reduction (Blemish)",
+    "Redness and paleness adjustment (Redness / Paleness)",
+    "Reduced frame-to-frame flicker (Temporal Stability)"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": 9800,
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/InStock",
+    "url": "https://booth.pm/en/items/9143928"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "design studio marimo",
+    "url": "https://totonoe-plugin.booth.pm/"
+   }
+  },
+  {
    "@type": "FAQPage",
    "@id": "https://fukudafukuo.github.io/totonoe/en/#faq",
    "mainEntity": [
@@ -113,7 +145,7 @@
      "name": "How does Totonoe Skin Retouch differ from Beauty Box?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Both plugins detect skin by color and retouch it. Totonoe Skin Retouch works with Premiere Pro and After Effects and is a one-time purchase of ¥9,800 (about US$65). Digital Anarchy's store lists Beauty Box Video 6.0 at $199 for one host app (checked November 8, 2026), and it also has versions for DaVinci Resolve, Final Cut Pro and Avid. A detailed comparison is in the article Beauty Box Alternative for Premiere Pro and After Effects."
+      "text": "Both plugins detect skin by color and retouch it. Totonoe Skin Retouch works with Premiere Pro and After Effects (the DaVinci Resolve version is a separate product, Mac only) and is a one-time purchase of ¥9,800 (about US$65). Digital Anarchy's store lists Beauty Box Video 6.0 at $199 for one host app (checked November 8, 2026), and it also has versions for DaVinci Resolve, Final Cut Pro and Avid. A detailed comparison is in the article Beauty Box Alternative for Premiere Pro and After Effects."
      }
     },
     {
@@ -129,7 +161,7 @@
      "name": "Why is it cheaper than other skin retouch plugins?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Because it has fewer features and supports fewer hosts. It is a single skin retouch effect, with no face detection, no AI-based masking, and no tools for brightening teeth or the whites of the eyes. It supports only Premiere Pro and After Effects. It is developed by one person and sold directly on BOOTH. If you need to retouch each person separately in a shot with several people, or want to use DaVinci Resolve or Final Cut Pro, another product may suit you better."
+      "text": "Because it has fewer features and supports fewer hosts. It is a single skin retouch effect, with no face detection, no AI-based masking, and no tools for brightening teeth or the whites of the eyes. It supports a narrow set of hosts: Premiere Pro and After Effects, plus a separate Mac-only version for DaVinci Resolve. It is developed by one person and sold directly on BOOTH. If you need to retouch each person separately in a shot with several people, or want to use Final Cut Pro or DaVinci Resolve on Windows, another product may suit you better."
      }
     },
     {
@@ -153,7 +185,7 @@
      "name": "Does it work on Windows?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It works on Windows 10 and 11 (64-bit). A free beta is available until November 15, 2026. On November 16, the official Windows version will be added to the full version product on BOOTH. One purchase covers both Mac and Windows. If you already bought the Mac version, you can download the Windows version from your BOOTH library at no extra cost. The Windows version runs on the CPU only, so it is slower than the Mac version. See System requirements for details."
+      "text": "It works on Windows 10 and 11 (64-bit). A free beta is available until November 15, 2026. On November 16, the official Windows version will be added to the full version product on BOOTH. One purchase covers both Mac and Windows. If you already bought the Mac version, you can download the Windows version from your BOOTH library at no extra cost. The Windows version runs on the CPU only, so it is slower than the Mac version. See System requirements for details. This answer is about the Premiere Pro and After Effects product. The DaVinci Resolve version is a separate product and is Mac only, so it does not work on Windows."
      }
     },
     {
@@ -161,7 +193,31 @@
      "name": "Does it work in DaVinci Resolve?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Not at the moment. The supported hosts are Premiere Pro and After Effects 2025 or later."
+      "text": "There is a separate DaVinci Resolve version. It is Mac only, and Windows is not supported. The product on this page (for Premiere Pro and After Effects) does not work in DaVinci Resolve. I checked the Resolve version on the free version of DaVinci Resolve 20.3.2, on a Mac with Apple Silicon. I have not checked DaVinci Resolve Studio or DaVinci Resolve 21. The Resolve version is a one-time purchase of ¥9,800 (about US$65), and its license is sold separately from this product. Try the free trial first to check that it works on your setup."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does the DaVinci Resolve version work on Windows?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The DaVinci Resolve version is Mac only. There is no Windows version."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I own the Premiere Pro / After Effects version. Do I need to buy the DaVinci Resolve version separately?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The licenses are sold separately, and a Premiere Pro / After Effects key does not activate the DaVinci Resolve version."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work in DaVinci Resolve Studio?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "I have not checked it. I only checked the free version of DaVinci Resolve 20.3.2. Please try the free trial."
      }
     },
     {
@@ -246,6 +302,7 @@
       <a href="#quality">Results</a>
       <a href="#params">Features</a>
       <a href="#specs">Requirements</a>
+      <a href="#resolve">Resolve</a>
       <a href="#pricing">Price</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -274,6 +331,7 @@
           <a class="btn btn-ghost" href="https://booth.pm/en/items/8663073" rel="noopener">Buy the full version</a>
         </div>
         <p class="price-note">Not a subscription: you pay once and keep using it. Payment is in Japanese yen on BOOTH, and your card company converts the amount. The free trial has every feature of the full version and adds faint diagonal stripes (a watermark) to the video.</p>
+        <p class="host-note"><strong>Using DaVinci Resolve?</strong> This product is for Premiere Pro and After Effects. The DaVinci Resolve version is a separate product. It is Mac only, and Windows is not supported. <a href="#resolve">About the DaVinci Resolve version</a></p>
       </div>
 
       <div class="cmp-wrap">
@@ -301,7 +359,7 @@
     <div class="table-wrap">
       <table class="facts">
         <tr><th scope="row">Type</th><td>Skin retouch (beauty) effect plugin</td></tr>
-        <tr><th scope="row">Host apps</th><td>Adobe Premiere Pro, After Effects (2025 or later)</td></tr>
+        <tr><th scope="row">Host apps</th><td>Adobe Premiere Pro, After Effects (2025 or later). The DaVinci Resolve version is a separate product (Mac only, Windows is not supported; <a href="#resolve">details</a>)</td></tr>
         <tr><th scope="row">OS</th><td>macOS 13 or later, Windows 10 / 11 (64-bit)</td></tr>
         <tr><th scope="row">What it adjusts</th><td>Skin roughness, redness, shine, small blemishes and acne, uneven color, skin tone</td></tr>
         <tr><th scope="row">Price</th><td>One-time purchase (not a subscription). Free trial available</td></tr>
@@ -519,7 +577,47 @@
         </div>
       </div>
     </div>
-    <p class="host-line"><strong>Host apps</strong>: Premiere Pro / After Effects 2025 or later.<br><strong>Bit depth</strong>: After Effects supports 8-bit, 16-bit and 32-bit float. Premiere Pro supports 8-bit and 32-bit float.</p>
+    <p class="host-line"><strong>Host apps</strong>: Premiere Pro / After Effects 2025 or later. The DaVinci Resolve version is a separate product (Mac only, Windows is not supported).<br><strong>Bit depth</strong>: After Effects supports 8-bit, 16-bit and 32-bit float. Premiere Pro supports 8-bit and 32-bit float.</p>
+  </div>
+</section>
+
+<!-- DaVinci Resolve version -->
+<section id="resolve">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">DAVINCI RESOLVE</p>
+      <h2>The DaVinci Resolve version is a separate product (Mac only)</h2>
+      <p>Totonoe Skin Retouch comes as separate products for each editing app. To avoid buying the wrong one, here is each combination.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec">
+        <h3>Premiere Pro / After Effects (this page)</h3>
+        <dl>
+          <div><dt>Host apps</dt><dd>Premiere Pro, After Effects (2025 or later)</dd></div>
+          <div><dt>OS</dt><dd>Mac (Windows version from November 16, 2026)</dd></div>
+          <div><dt>Price</dt><dd>&yen;9,800 (about US$65), one-time purchase</dd></div>
+        </dl>
+      </div>
+      <div class="spec">
+        <h3>DaVinci Resolve (separate product)</h3>
+        <dl>
+          <div><dt>Host app</dt><dd>DaVinci Resolve (OpenFX). Checked on the free version, 20.3.2</dd></div>
+          <div><dt>OS</dt><dd>Mac only. Windows is not supported</dd></div>
+          <div><dt>Price</dt><dd>&yen;9,800 (about US$65), one-time purchase. The license is sold separately from the Premiere Pro / After Effects version</dd></div>
+        </dl>
+      </div>
+    </div>
+    <ul class="checks">
+      <li>The DaVinci Resolve version does not run in Premiere Pro or After Effects. The product on this page does not run in DaVinci Resolve</li>
+      <li>I checked it on the free version of DaVinci Resolve 20.3.2, on a Mac with Apple Silicon. I have not checked DaVinci Resolve Studio, DaVinci Resolve 21, or an Intel Mac</li>
+      <li>The features and parameters are the same as the Premiere Pro / After Effects version. The one difference: there is no eyedropper in the viewer yet, so set the skin color with the Skin Color control</li>
+      <li>In color-managed HDR (wide gamut) projects, skin detection can get weaker</li>
+    </ul>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/9143928" rel="noopener">Buy the DaVinci Resolve version (BOOTH)</a>
+      <a class="btn btn-ghost" href="https://booth.pm/en/items/9143931" rel="noopener">Free trial for DaVinci Resolve</a>
+    </div>
+    <p class="hint">A Premiere Pro / After Effects license key does not activate the DaVinci Resolve version. Try the free trial first to check that it works on your Mac and your DaVinci Resolve.</p>
   </div>
 </section>
 
@@ -545,6 +643,7 @@
       </div>
       <p class="hint">This is a download product on BOOTH, so purchases cannot be refunded except when the product is defective. Please test it with the free trial before you buy. The trial has every feature of the full version and adds faint diagonal stripes to the video.</p>
     </div>
+    <p class="hint">The DaVinci Resolve version is a separate product (&yen;9,800, one-time purchase, Mac only). Its license is sold separately. <a href="#resolve">About the DaVinci Resolve version</a></p>
   </div>
 </section>
 
@@ -603,7 +702,7 @@
       </details>
       <details>
         <summary>How does Totonoe Skin Retouch differ from Beauty Box?</summary>
-        <div class="ans"><p>Both plugins detect skin by color and retouch it. Totonoe Skin Retouch works with Premiere Pro and After Effects and is a one-time purchase of ¥9,800 (about US$65). Digital Anarchy's store lists Beauty Box Video 6.0 at $199 for one host app (checked November 8, 2026), and it also has versions for DaVinci Resolve, Final Cut Pro and Avid. A detailed comparison is in the article <a href="beauty-box-alternative/">Beauty Box Alternative for Premiere Pro and After Effects</a>.</p></div>
+        <div class="ans"><p>Both plugins detect skin by color and retouch it. Totonoe Skin Retouch works with Premiere Pro and After Effects (the DaVinci Resolve version is a separate product, Mac only) and is a one-time purchase of ¥9,800 (about US$65). Digital Anarchy's store lists Beauty Box Video 6.0 at $199 for one host app (checked November 8, 2026), and it also has versions for DaVinci Resolve, Final Cut Pro and Avid. A detailed comparison is in the article <a href="beauty-box-alternative/">Beauty Box Alternative for Premiere Pro and After Effects</a>.</p></div>
       </details>
       <details>
         <summary>How does it differ from Skinworks?</summary>
@@ -611,7 +710,7 @@
       </details>
       <details>
         <summary>Why is it cheaper than other skin retouch plugins?</summary>
-        <div class="ans"><p>Because it has fewer features and supports fewer hosts. It is a single skin retouch effect, with no face detection, no AI-based masking, and no tools for brightening teeth or the whites of the eyes. It supports only Premiere Pro and After Effects. It is developed by one person and sold directly on BOOTH. If you need to retouch each person separately in a shot with several people, or want to use DaVinci Resolve or Final Cut Pro, another product may suit you better.</p></div>
+        <div class="ans"><p>Because it has fewer features and supports fewer hosts. It is a single skin retouch effect, with no face detection, no AI-based masking, and no tools for brightening teeth or the whites of the eyes. It supports a narrow set of hosts: Premiere Pro and After Effects, plus a separate Mac-only version for DaVinci Resolve. It is developed by one person and sold directly on BOOTH. If you need to retouch each person separately in a shot with several people, or want to use Final Cut Pro or DaVinci Resolve on Windows, another product may suit you better.</p></div>
       </details>
       <details>
         <summary>How do I choose a skin retouch plugin?</summary>
@@ -623,11 +722,23 @@
       </details>
       <details>
         <summary>Does it work on Windows?</summary>
-        <div class="ans"><p>It works on Windows 10 and 11 (64-bit). A free beta is available until November 15, 2026. On November 16, the official Windows version will be added to the full version product on BOOTH. One purchase covers both Mac and Windows. If you already bought the Mac version, you can download the Windows version from your BOOTH library at no extra cost.</p><p>The Windows version runs on the CPU only, so it is slower than the Mac version. See <a href="#specs">System requirements</a> for details.</p></div>
+        <div class="ans"><p>It works on Windows 10 and 11 (64-bit). A free beta is available until November 15, 2026. On November 16, the official Windows version will be added to the full version product on BOOTH. One purchase covers both Mac and Windows. If you already bought the Mac version, you can download the Windows version from your BOOTH library at no extra cost.</p><p>The Windows version runs on the CPU only, so it is slower than the Mac version. See <a href="#specs">System requirements</a> for details.</p><p>This answer is about the Premiere Pro and After Effects product. The DaVinci Resolve version is a separate product and is Mac only, so it does not work on Windows.</p></div>
       </details>
       <details>
         <summary>Does it work in DaVinci Resolve?</summary>
-        <div class="ans"><p>Not at the moment. The supported hosts are Premiere Pro and After Effects 2025 or later.</p></div>
+        <div class="ans"><p>There is a separate DaVinci Resolve version. It is Mac only, and Windows is not supported. The product on this page (for Premiere Pro and After Effects) does not work in DaVinci Resolve. I checked the Resolve version on the free version of DaVinci Resolve 20.3.2, on a Mac with Apple Silicon. I have not checked DaVinci Resolve Studio or DaVinci Resolve 21. The Resolve version is a one-time purchase of ¥9,800 (about US$65), and its license is sold separately from this product. Try the free trial first to check that it works on your setup.</p><p><a href="https://booth.pm/en/items/9143928" rel="noopener">DaVinci Resolve version on BOOTH</a> / <a href="https://booth.pm/en/items/9143931" rel="noopener">Free trial</a></p></div>
+      </details>
+      <details>
+        <summary>Does the DaVinci Resolve version work on Windows?</summary>
+        <div class="ans"><p>No. The DaVinci Resolve version is Mac only. There is no Windows version.</p></div>
+      </details>
+      <details>
+        <summary>I own the Premiere Pro / After Effects version. Do I need to buy the DaVinci Resolve version separately?</summary>
+        <div class="ans"><p>Yes. The licenses are sold separately, and a Premiere Pro / After Effects key does not activate the DaVinci Resolve version.</p></div>
+      </details>
+      <details>
+        <summary>Does it work in DaVinci Resolve Studio?</summary>
+        <div class="ans"><p>I have not checked it. I only checked the free version of DaVinci Resolve 20.3.2. Please try the free trial.</p></div>
       </details>
       <details>
         <summary>Can I try it before buying?</summary>

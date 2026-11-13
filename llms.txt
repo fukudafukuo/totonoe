@@ -1,9 +1,9 @@
 # Totonoe Skin Retouch
 
-> Premiere ProとAfter Effectsで使う肌補正（美肌）プラグイン。肌の色を自動で検出し、輪郭と質感を残したまま、肌の粗さ・赤み・テカリ・色ムラを整える。MacとWindowsに対応、買い切り、無料体験版あり。
+> Premiere ProとAfter Effectsで使う肌補正（美肌）プラグイン。肌の色を自動で検出し、輪郭と質感を残したまま、肌の粗さ・赤み・テカリ・色ムラを整える。MacとWindowsに対応、買い切り、無料体験版あり。DaVinci Resolve 用は別商品で、Mac 専用、Windows 非対応。
 
 - 販売: BOOTH（totonoe-plugin）
-- 対応ソフト: Adobe Premiere Pro、After Effects（2025以降）
+- 対応ソフト（この商品）: Adobe Premiere Pro、After Effects（2025以降）。DaVinci Resolve 用は別商品
 - 対応OS: macOS 13以降、Windows 10／11（64bit、CPU処理）
 - エフェクト名: Skin Retouch
 - 処理: すべてパソコンの中で行う。映像を外部に送らず、インストール後はオフラインで使える
@@ -15,6 +15,9 @@
 - [製品ページ](https://fukudafukuo.github.io/totonoe/): 概要、比較画像、動作環境、価格、よくある質問
 - [製品版（BOOTH）](https://totonoe-plugin.booth.pm/items/8663073)
 - [無料体験版（BOOTH）](https://totonoe-plugin.booth.pm/items/8892910): 製品版と同じ機能を試せる。映像に薄い斜めの縞が入る
+- [DaVinci Resolve 版（別商品、BOOTH）](https://totonoe-plugin.booth.pm/items/9143928): DaVinci Resolve 用の OpenFX。Mac 専用で、Windows には対応していない。無料版の DaVinci Resolve 20.3.2（Apple Silicon の Mac）で動作を確認した。Studio 版と Resolve 21 は確認していない。Premiere Pro と After Effects では使えない。買い切り ¥9,800。ライセンスは Premiere Pro／After Effects 版とは別売り
+- [DaVinci Resolve 版の無料体験版（BOOTH）](https://totonoe-plugin.booth.pm/items/9143931): 映像にウォーターマークが入る
+- [DaVinci Resolve 版の説明（製品ページ）](https://fukudafukuo.github.io/totonoe/#resolve): 組み合わせごとの対応ソフトと OS
 
 ## 使い方と解説
 
@@ -31,7 +34,7 @@
 
 ## English
 
-> Totonoe Skin Retouch is a skin retouch (beauty) plugin for Adobe Premiere Pro and After Effects. It detects skin color automatically and evens out roughness, redness, shine and uneven color while keeping edges and texture. One-time purchase, free trial available. macOS 13 or later and Windows 10/11 (64-bit, CPU processing).
+> Totonoe Skin Retouch is a skin retouch (beauty) plugin for Adobe Premiere Pro and After Effects. It detects skin color automatically and evens out roughness, redness, shine and uneven color while keeping edges and texture. One-time purchase, free trial available. macOS 13 or later and Windows 10/11 (64-bit, CPU processing). A separate DaVinci Resolve version is available. It is Mac only, and Windows is not supported.
 
 - Premiere Pro has no beauty filter or built-in skin smoothing effect. The built-in workaround is Lumetri Color HSL Secondary; a skin smoothing plugin such as Totonoe Skin Retouch detects skin automatically on every frame.
 - Demo video: https://youtu.be/ukYHc32wasc . X: https://x.com/totonoe_plugin . Substack: https://totonoestudio.substack.com
@@ -44,5 +47,7 @@
 - [How to reduce skin shine in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/): Lumetri Color HSL Secondary for shine across the face, a tracked mask for one hot spot, and the plugin's De-Shine control
 - [Full version (BOOTH, English)](https://booth.pm/en/items/8663073)
 - [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
+- [DaVinci Resolve version (separate product, BOOTH English)](https://booth.pm/en/items/9143928): OpenFX plugin for DaVinci Resolve. Mac only; Windows is not supported. Checked on the free version of DaVinci Resolve 20.3.2 on a Mac with Apple Silicon; DaVinci Resolve Studio and DaVinci Resolve 21 are not checked. It does not run in Premiere Pro or After Effects. One-time purchase, 9,800 yen (about US$65); the license is sold separately from the Premiere Pro / After Effects version
+- [DaVinci Resolve version, free trial (BOOTH English)](https://booth.pm/en/items/9143931): adds a watermark to the video
 - Processing: everything runs on your computer. Footage is never uploaded, and it works offline once installed
 - Support: send a message through BOOTH in English or Japanese
