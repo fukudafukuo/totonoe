@@ -21,6 +21,7 @@
 
 ## 使い方と解説
 
+- [DaVinci Resolve 用の肌補正プラグインを発売しました](https://note.com/studiomarimo/n/n0150a8e299b0): 対応ソフトと OS の確認方法
 - [使い方ガイド](https://note.com/studiomarimo/n/n4d90fd2467b5): 手順と全パラメータの解説
 - [肌補正プラグインの比較](https://note.com/studiomarimo/n/nf96661de9817): Beauty Box、Skinworks、Portraiture、Retouch4me、Cosmo、Beauty Studioとの価格と機能の比較
 - [動画の肌補正はAIでできる？](https://note.com/studiomarimo/n/nceb1808c6636): AI機能とAIプラグインの現状、¥9,800の肌補正プラグインが安い理由
