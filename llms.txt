@@ -54,3 +54,5 @@
 - Support: send a message through BOOTH in English or Japanese
 
 - [DaVinci Resolve用の肌補正プラグインと無料体験版](https://fukudafukuo.github.io/totonoe/resolve/): Mac用、Premiere Pro／After Effects版とは別売り。
+
+- [Fix skin retouch flicker in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/skin-retouch-flicker/): how to inspect and refine a changing skin selection with Lumetri Color or Totonoe.
