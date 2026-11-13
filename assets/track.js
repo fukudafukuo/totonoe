@@ -3,6 +3,8 @@
   'use strict';
   function eventFor(href) {
     if (href.indexOf('booth.pm') !== -1) {
+      if (href.indexOf('items/9143928') !== -1) return 'click_booth_resolve_buy';
+      if (href.indexOf('items/9143931') !== -1) return 'click_booth_resolve_trial';
       if (href.indexOf('items/8663073') !== -1) return 'click_booth_buy';
       if (href.indexOf('items/8892910') !== -1) return 'click_booth_trial';
       if (href.indexOf('items/9047647') !== -1) return 'click_booth_win';

@@ -52,3 +52,5 @@
 - [DaVinci Resolve version, free trial (BOOTH English)](https://booth.pm/en/items/9143931): adds a watermark to the video
 - Processing: everything runs on your computer. Footage is never uploaded, and it works offline once installed
 - Support: send a message through BOOTH in English or Japanese
+
+- [DaVinci Resolve用の肌補正プラグインと無料体験版](https://fukudafukuo.github.io/totonoe/resolve/): Mac用、Premiere Pro／After Effects版とは別売り。
