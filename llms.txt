@@ -56,3 +56,6 @@
 - [DaVinci Resolve用の肌補正プラグインと無料体験版](https://fukudafukuo.github.io/totonoe/resolve/): Mac用、Premiere Pro／After Effects版とは別売り。
 
 - [Fix skin retouch flicker in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/skin-retouch-flicker/): how to inspect and refine a changing skin selection with Lumetri Color or Totonoe.
+
+- [DaVinci Resolve version (English page)](https://fukudafukuo.github.io/totonoe/en/resolve/): separate product for DaVinci Resolve, Mac only, Windows not supported. Checked on the free version of DaVinci Resolve 20.3.2 on a Mac with Apple Silicon; DaVinci Resolve Studio, DaVinci Resolve 21 and Intel Macs are not checked. Parameters, requirements, a comparison with Resolve Studio's face tools (from the official manual and site, checked Nov 14, 2026), price (9,800 yen, about US$65, one-time purchase), FAQ
+- [How to smooth skin in DaVinci Resolve (free version and Studio)](https://fukudafukuo.github.io/totonoe/en/davinci-resolve-skin-retouch/): Qualifier, tracked Power Window, Mid-tone Detail and the Blur palette, the Studio-only face effects (Face Refinement, Beauty, Blemish Removal) as described in the DaVinci Resolve 21 manual, and a plugin option for Mac

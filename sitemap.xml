@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://fukudafukuo.github.io/totonoe/en/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://fukudafukuo.github.io/totonoe/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fukudafukuo.github.io/totonoe/en/"/>
   </url>
@@ -32,6 +32,18 @@
     <loc>https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
-  <url><loc>https://fukudafukuo.github.io/totonoe/resolve/</loc><lastmod>2026-11-13</lastmod></url>
+  <url>
+    <loc>https://fukudafukuo.github.io/totonoe/resolve/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fukudafukuo.github.io/totonoe/resolve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fukudafukuo.github.io/totonoe/en/resolve/"/>
+  </url>
+  <url>
+    <loc>https://fukudafukuo.github.io/totonoe/en/resolve/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fukudafukuo.github.io/totonoe/resolve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fukudafukuo.github.io/totonoe/en/resolve/"/>
+  </url>
+  <url><loc>https://fukudafukuo.github.io/totonoe/en/davinci-resolve-skin-retouch/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://fukudafukuo.github.io/totonoe/en/skin-retouch-flicker/</loc><lastmod>2026-11-13</lastmod></url>
 </urlset>
