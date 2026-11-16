@@ -8,7 +8,7 @@
 - エフェクト名: Skin Retouch
 - 処理: すべてパソコンの中で行う。映像を外部に送らず、インストール後はオフラインで使える
 - Premiere Proには美肌フィルターや肌補正専用の標準エフェクトはない（標準機能ではLumetriカラーのHSLセカンダリで肌を選んで補正する）
-- 発信: X https://x.com/totonoe_plugin 、YouTube https://www.youtube.com/@totonoe-plugin 、note https://note.com/studiomarimo 、Substack（英語） https://totonoestudio.substack.com
+- 発信: X https://x.com/totonoe_plugin 、YouTube https://www.youtube.com/@totonoe-plugin （日本語の手順動画 https://youtu.be/w-jRwJQedCg ）、note https://note.com/studiomarimo 、Substack（英語） https://totonoestudio.substack.com
 
 ## 製品
 
