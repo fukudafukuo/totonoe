@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (GA4). The same measurement ID is also set in the BOOTH shop settings -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPGWX3PMB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPGWX3PMB1');
+</script>
+<!-- Adobe UI names (English help, checked 2026-11-09 and reused here): Lumetri Color HSL Secondary > Key / Set color / Color/Gray / Refine (Denoise, Blur) / Correction (Sharpen)
+    https://helpx.adobe.com/premiere/desktop/correct-color/add-color-effects/correct-color-using-hsl-secondary-controls.html
+  Source article (Japanese): docs/press/note_seo_flat.md
+  Search terms (Google suggest, 2026-11-16): "skin retouch texture", "skin smoothing texture", "how to improve skin texture in premiere pro", "skin texture after effects".
+  The values of Smoothing / Texture / Presets are from docs/USER_GUIDE.md. The comparison image is the same as the note article (labels in English). -->
+<title>Skin Retouch Texture in Premiere Pro: Fix the Plastic Look</title>
+<meta name="description" content="Retouched skin looks flat or plastic? See the causes, how to ease a negative Sharpen in Lumetri, and how Smoothing and Texture work in a retouch plugin.">
+<link rel="canonical" href="https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/">
+<meta name="theme-color" content="#0e0c1d">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Totonoe Skin Retouch">
+<meta property="og:title" content="Skin Retouch Texture in Premiere Pro: Fix the Flat, Plastic Look">
+<meta property="og:description" content="Why skin retouching makes skin flat, how to ease a negative Sharpen in Lumetri, and how Smoothing and Texture work in a plugin.">
+<meta property="og:url" content="https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/">
+<meta property="og:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skin Retouch Texture in Premiere Pro">
+<meta name="twitter:description" content="Why retouched skin looks flat, and how to keep the texture.">
+<meta name="twitter:image" content="https://fukudafukuo.github.io/totonoe/assets/ogp.jpg">
+
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  .guide-body { max-width: 860px; }
+  .guide-body h2 { font-size: clamp(24px, 4.4vw, 32px); margin: 0 0 14px; }
+  .guide-body h3 { font-size: 19px; margin: 28px 0 10px; }
+  .guide-body p, .guide-body li { color: #d9d4ee; }
+  .guide-body ul, .guide-body ol { padding-left: 1.3em; margin: 0 0 16px; }
+  .guide-body li + li { margin-top: 6px; }
+  .guide-hero { padding: 40px 0 28px; background: linear-gradient(180deg, #120f26, var(--bg)); }
+  .guide-hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.4; margin: 0 0 12px; color: #fff; }
+  .guide-hero p { color: #d9d4ee; max-width: 720px; margin: 0 0 8px; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin: 24px 0 0; max-width: 720px; }
+  .toc h2 { font-size: 16px; margin: 0 0 8px; }
+  .toc ol { margin: 0; padding-left: 1.3em; columns: 2 240px; }
+  .toc li { margin: 0 0 4px; }
+  .toc a { color: var(--accent); }
+  .guide-sec { padding: 44px 0; scroll-margin-top: 64px; }
+  .guide-sec[id], .guide-body h3[id] { scroll-margin-top: 72px; }
+  .guide-fig { margin: 18px 0 0; max-width: 860px; }
+  .guide-fig img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "@id": "https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/#article",
+ "headline": "Skin Retouch Texture in Premiere Pro: Fix the Flat, Plastic Look",
+ "description": "Why skin retouching makes skin look flat, how to ease a negative Sharpen in Lumetri Color HSL Secondary, and how Smoothing and Texture work together in a skin retouch plugin.",
+ "url": "https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/",
+ "mainEntityOfPage": "https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/",
+ "inLanguage": "en",
+ "image": "https://fukudafukuo.github.io/totonoe/assets/flat-compare.webp",
+ "datePublished": "2026-11-16",
+ "dateModified": "2026-11-16",
+ "about": {
+  "@type": "SoftwareApplication",
+  "@id": "https://fukudafukuo.github.io/totonoe/en/#software",
+  "name": "Totonoe Skin Retouch",
+  "url": "https://fukudafukuo.github.io/totonoe/en/"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "design studio marimo",
+  "url": "https://totonoe-plugin.booth.pm/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why does skin look flat or plastic after smoothing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Smoothing blurs color unevenness and also the fine bumps of pores and skin grain. When those small shadows disappear, the skin looks flat. A strong setting, or the same strength on wide shots and close-ups, makes it worse."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I keep skin texture in Premiere Pro without a plugin?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "If you smooth skin with a negative Sharpen inside an HSL Secondary selection, make the negative value smaller (for example from -50 to -30) and lower Blur in Refine. Compare with the footage before correction at 100% zoom."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does Texture do in Totonoe Skin Retouch?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Texture adds back the fine detail (pores and skin grain) that Smoothing removed. It ranges from 0 to 100 and defaults to 40. When you raise Smoothing, raise Texture with it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between Amount and Output Mix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Amount lowers the strength of the retouch itself (Smoothing, De-Shine, Blemish, Redness and Paleness together; 0% equals the original). Output Mix blends the retouched result with the original video; at 100% you see the retouched result only."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">Totonoe<small>Skin Retouch</small></a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#answer">Short answer</a>
+      <a href="#causes">Causes</a>
+      <a href="#premiere">Premiere Pro</a>
+      <a href="#plugin">Plugin</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://booth.pm/en/items/8892910" rel="noopener">Free trial</a>
+    <a href="../../" hreflang="ja" lang="ja" style="margin-left:4px;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap">日本語</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="guide-hero" id="top">
+  <div class="wrap guide-body">
+    <h1>Skin Retouch Texture in Premiere Pro: Fix the Flat, Plastic Look</h1>
+    <p>Skin retouching can leave skin flat, like a smooth surface with no pores. This article explains why that happens and how to bring the texture back, first with Premiere Pro's built-in tools and then with a plugin.</p>
+    <p>I am a video editor in Japan (music videos, interviews and commercials) and the developer of Totonoe Skin Retouch, the plugin in the second half.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#answer">Short answer</a></li>
+        <li><a href="#causes">Three causes of flat skin</a></li>
+        <li><a href="#premiere">Fix it in Premiere Pro</a></li>
+        <li><a href="#plugin">Fix it with a plugin: Smoothing and Texture</a></li>
+        <li><a href="#order">What to adjust, in order</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="guide-sec" id="answer">
+  <div class="wrap guide-body">
+    <h2>Short answer</h2>
+    <p>Skin goes flat when the amount you blur is larger than the amount of fine texture you keep. The fix is to blur less, or to put texture back after blurring.</p>
+    <ul>
+      <li>In Premiere Pro, make the negative <strong>Sharpen</strong> value smaller and lower <strong>Blur</strong> in Lumetri Color HSL Secondary.</li>
+      <li>In a plugin, raise <strong>Texture</strong> as much as you raise <strong>Smoothing</strong>. If the whole retouch is still too strong, lower <strong>Amount</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="causes">
+  <div class="wrap guide-body">
+    <h2>Three causes of flat skin</h2>
+    <h3>1. The blur removes pores and skin grain as well</h3>
+    <p>Skin smoothing blurs color unevenness, and it blurs the fine bumps of pores and skin grain at the same time. Once the small shadows made by those bumps are gone, the skin looks flat.</p>
+    <h3>2. The retouch is too strong</h3>
+    <p>The more you smooth, the less texture is left. If you widen the blur without putting texture back, the skin looks painted.</p>
+    <h3>3. Wide shots and close-ups get the same strength</h3>
+    <p>Skin texture is visible in a close-up, but in a wide shot you barely see it. Applying a close-up's strength to a wide shot flattens the skin more than it needs to.</p>
+  </div>
+</section>
+
+<section class="guide-sec" id="premiere">
+  <div class="wrap guide-body">
+    <h2>Fix it in Premiere Pro</h2>
+    <p>If you smooth skin by selecting the skin color with <strong>HSL Secondary</strong> in Lumetri Color and setting <strong>Sharpen</strong> to a negative value, review it in this order. The selection steps are in <a href="../premiere-pro-skin-retouch/">How to Retouch Skin in Premiere Pro</a>.</p>
+    <ol>
+      <li>Under <strong>Correction</strong>, make the negative <strong>Sharpen</strong> value smaller. If it was -50, try -30.</li>
+      <li>Under <strong>Refine</strong>, lower <strong>Blur</strong>.</li>
+      <li>View at 100% zoom and compare with the footage before correction.</li>
+    </ol>
+    <p>A negative Sharpen blurs the whole selection evenly, so the amount of blur and the loss of texture move together. That is why it is hard to adjust only the flat look with this method.</p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="plugin">
+  <div class="wrap guide-body">
+    <h2>Fix it with a plugin: Smoothing and Texture</h2>
+    <p><strong>Totonoe Skin Retouch</strong> is a skin retouch plugin for Premiere Pro and After Effects. It has one slider for how much the skin is smoothed (<strong>Smoothing</strong>) and a separate slider for how much texture is put back afterwards (<strong>Texture</strong>), so you can change one without the other.</p>
+    <p>The image below uses the same photo three times. Smoothing is 80 in both retouched versions. Only Texture differs, 0 in the middle and 60 on the right. It was made with the plugin's own processing, starting from the Standard preset.</p>
+
+    <figure class="guide-fig">
+      <a class="zoom" href="../../assets/flat-compare.webp" target="_blank" rel="noopener"><img src="../../assets/flat-compare.webp" width="1600" height="461" alt="Three crops of the same face: the original, Smoothing 80 with Texture 0 where the cheek looks flat, and Smoothing 80 with Texture 60 where the cheek texture returns" loading="lazy" decoding="async"></a>
+      <figcaption class="cap">From left: original, Smoothing 80 / Texture 0, Smoothing 80 / Texture 60. With the same Smoothing, raising Texture brings back the texture of the cheek.</figcaption>
+    </figure>
+
+    <p style="margin-top:18px">To see how Smoothing and Texture behave on your own footage, use the free trial. It has every feature of the full version; the only difference is a faint diagonal-stripe watermark on the video.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="../">See the product page</a>
+    </div>
+  </div>
+</section>
+
+<section class="guide-sec" id="order">
+  <div class="wrap guide-body">
+    <h2>What to adjust, in order</h2>
+    <ol>
+      <li>Raise <strong>Texture</strong>. When you raise Smoothing, raise Texture with it.</li>
+      <li>If it still looks too strong, lower <strong>Amount</strong>. Amount scales Smoothing, De-Shine, Blemish, Redness and Paleness together. At 0% the video is the same as the original.</li>
+      <li>To let some of the original footage show through, lower <strong>Output Mix</strong>. At 100% you see the retouched result only, and the lower it goes, the more of the original is mixed in.</li>
+      <li>If you are not sure, choose the <strong>Natural</strong> preset. It keeps the most texture of the three presets.</li>
+    </ol>
+    <p>The presets set these values:</p>
+    <ul>
+      <li>Natural: Smoothing 25, Texture 60</li>
+      <li>Standard (default): Smoothing 50, Texture 40</li>
+      <li>Strong: Smoothing 80, Texture 30 (it also sets De-Shine 25, Blemish 25 and Redness 8)</li>
+    </ul>
+    <p>Amount and Output Mix both weaken the retouch. Amount lowers the strength of the retouch itself, and Output Mix blends the finished result with the original video.</p>
+    <p>For close-ups and wide shots, change Amount per clip. Every parameter is explained in the <a href="../guide/">user guide</a>.</p>
+
+    <h3>Limits</h3>
+    <p>The plugin detects skin by color, so everyone with a similar skin tone in the shot is retouched. If a background or clothing with a skin-like color is affected, turn on <strong>Show Mask</strong> and narrow <strong>Hue Range</strong>. Log footage needs a Rec.709 conversion before the effect. This version does not run in DaVinci Resolve, Final Cut Pro or Avid. The DaVinci Resolve version is a separate product (<a href="../resolve/">Mac only</a>).</p>
+    <p>It is a one-time purchase of &yen;9,800 (about US$65) on BOOTH and works in Premiere Pro and After Effects 2025 or later on Mac (macOS 13 or later) and Windows (CPU only). Everything is processed on your computer, so your footage is never sent to a server.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://booth.pm/en/items/8892910" rel="noopener">Download the free trial</a>
+      <a class="btn btn-ghost" href="https://booth.pm/en/items/8663073" rel="noopener">Buy the full version</a>
+    </div>
+    <p style="margin-top:18px">Related articles: <a href="../reduce-skin-shine-premiere-pro/">How to Reduce Skin Shine in Premiere Pro</a> / <a href="../skin-retouch-flicker/">How to Check Flickering Skin Retouch</a> / <a href="../after-effects-skin-retouch/">How to Retouch Skin in After Effects</a></p>
+  </div>
+</section>
+
+<section class="guide-sec alt" id="faq">
+  <div class="wrap guide-body">
+    <h2>FAQ</h2>
+    <h3>Why does skin look flat or plastic after smoothing?</h3>
+    <p>Smoothing blurs color unevenness and also the fine bumps of pores and skin grain. When those small shadows disappear, the skin looks flat. A strong setting, or the same strength on wide shots and close-ups, makes it worse.</p>
+    <h3>How do I keep skin texture in Premiere Pro without a plugin?</h3>
+    <p>If you smooth skin with a negative Sharpen inside an HSL Secondary selection, make the negative value smaller (for example from -50 to -30) and lower Blur in Refine. Compare with the footage before correction at 100% zoom.</p>
+    <h3>What does Texture do in Totonoe Skin Retouch?</h3>
+    <p>Texture adds back the fine detail (pores and skin grain) that Smoothing removed. It ranges from 0 to 100 and defaults to 40. When you raise Smoothing, raise Texture with it.</p>
+    <h3>What is the difference between Amount and Output Mix?</h3>
+    <p>Amount lowers the strength of the retouch itself (Smoothing, De-Shine, Blemish, Redness and Paleness together; 0% equals the original). Output Mix blends the retouched result with the original video; at 100% you see the retouched result only.</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Product page</a>
+      <a href="../guide/">User guide</a>
+      <a href="https://totonoe-plugin.booth.pm/" rel="noopener">BOOTH shop (totonoe-plugin)</a>
+      <a href="../../" hreflang="ja" lang="ja">日本語</a>
+    </div>
+    <p>Totonoe Skin Retouch is a skin retouch plugin for Premiere Pro and After Effects.</p>
+    <p>Adobe, Premiere Pro and After Effects are trademarks or registered trademarks of Adobe Inc. in the United States and other countries. This plugin is not provided or endorsed by Adobe.</p>
+    <p>This site uses Google Analytics to understand how it is visited. Google Analytics collects visit information with cookies, but the information does not identify individuals. <a href="https://policies.google.com/technologies/partner-sites?hl=en" rel="noopener">How Google uses data</a></p>
+  </div>
+</footer>
+<script src="../../assets/main.js" defer></script>
+<script src="../../assets/track.js" defer></script>
+</body>
+</html>
