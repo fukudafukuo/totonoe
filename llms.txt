@@ -12,12 +12,12 @@
 
 ## 製品
 
-- [製品ページ](https://fukudafukuo.github.io/totonoe/): 概要、比較画像、動作環境、価格、よくある質問
+- [製品ページ](https://totonoe.designstudiomarimo.com/): 概要、比較画像、動作環境、価格、よくある質問
 - [製品版（BOOTH）](https://totonoe-plugin.booth.pm/items/8663073)
 - [無料体験版（BOOTH）](https://totonoe-plugin.booth.pm/items/8892910): 製品版と同じ機能を試せる。映像に薄い斜めの縞が入る
 - [DaVinci Resolve 版（別商品、BOOTH）](https://totonoe-plugin.booth.pm/items/9143928): DaVinci Resolve 用の OpenFX。Mac 専用で、Windows には対応していない。無料版の DaVinci Resolve 20.3.2（Apple Silicon の Mac）で動作を確認した。Studio 版と Resolve 21 は確認していない。Premiere Pro と After Effects では使えない。買い切り ¥9,800。ライセンスは Premiere Pro／After Effects 版とは別売り
 - [DaVinci Resolve 版の無料体験版（BOOTH）](https://totonoe-plugin.booth.pm/items/9143931): 映像にウォーターマークが入る
-- [DaVinci Resolve 版の説明（製品ページ）](https://fukudafukuo.github.io/totonoe/#resolve): 組み合わせごとの対応ソフトと OS
+- [DaVinci Resolve 版の説明（製品ページ）](https://totonoe.designstudiomarimo.com/#resolve): 組み合わせごとの対応ソフトと OS
 
 ## 使い方と解説
 
@@ -40,13 +40,13 @@
 - Premiere Pro has no beauty filter or built-in skin smoothing effect. The built-in workaround is Lumetri Color HSL Secondary; a skin smoothing plugin such as Totonoe Skin Retouch detects skin automatically on every frame.
 - Demo video: https://youtu.be/ukYHc32wasc . X: https://x.com/totonoe_plugin . Substack: https://totonoestudio.substack.com
 
-- [English product page](https://fukudafukuo.github.io/totonoe/en/): overview, comparison images, system requirements, price (one-time purchase, US$65), FAQ
-- [English user guide](https://fukudafukuo.github.io/totonoe/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
-- [How to retouch skin in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/): the built-in Lumetri Color (HSL Secondary) method step by step, its weak points, a plugin as the second method, and tips for a natural look
-- [Beauty Box alternative for Premiere Pro and After Effects](https://fukudafukuo.github.io/totonoe/en/beauty-box-alternative/): Totonoe Skin Retouch compared with Beauty Box Video on price, host apps, trial and features (vendor information checked Nov 8, 2026), and when each is the better choice
-- [How to retouch skin in After Effects](https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/): Bilateral Blur on a duplicated layer with a tracked face mask, its weak points, and a plugin as the second method
-- [How to reduce skin shine in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/): Lumetri Color HSL Secondary for shine across the face, a tracked mask for one hot spot, and the plugin's De-Shine control
-- [Skin retouch texture in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/): why smoothing makes skin flat, easing a negative Sharpen in Lumetri HSL Secondary, and raising Texture along with Smoothing in the plugin
+- [English product page](https://totonoe.designstudiomarimo.com/en/): overview, comparison images, system requirements, price (one-time purchase, US$65), FAQ
+- [English user guide](https://totonoe.designstudiomarimo.com/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
+- [How to retouch skin in Premiere Pro](https://totonoe.designstudiomarimo.com/en/premiere-pro-skin-retouch/): the built-in Lumetri Color (HSL Secondary) method step by step, its weak points, a plugin as the second method, and tips for a natural look
+- [Beauty Box alternative for Premiere Pro and After Effects](https://totonoe.designstudiomarimo.com/en/beauty-box-alternative/): Totonoe Skin Retouch compared with Beauty Box Video on price, host apps, trial and features (vendor information checked Nov 8, 2026), and when each is the better choice
+- [How to retouch skin in After Effects](https://totonoe.designstudiomarimo.com/en/after-effects-skin-retouch/): Bilateral Blur on a duplicated layer with a tracked face mask, its weak points, and a plugin as the second method
+- [How to reduce skin shine in Premiere Pro](https://totonoe.designstudiomarimo.com/en/reduce-skin-shine-premiere-pro/): Lumetri Color HSL Secondary for shine across the face, a tracked mask for one hot spot, and the plugin's De-Shine control
+- [Skin retouch texture in Premiere Pro](https://totonoe.designstudiomarimo.com/en/keep-skin-texture-premiere-pro/): why smoothing makes skin flat, easing a negative Sharpen in Lumetri HSL Secondary, and raising Texture along with Smoothing in the plugin
 - [Full version (Gumroad, US$65, one-time purchase, Mac and Windows; no Gumroad account needed)](https://hukkuu.gumroad.com/l/totonoe-skin-retouch)
 - [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
 - [DaVinci Resolve version (separate product, Gumroad)](https://hukkuu.gumroad.com/l/totonoe-skin-retouch-resolve): OpenFX plugin for DaVinci Resolve. Mac only; Windows is not supported. Checked on the free version of DaVinci Resolve 20.3.2 on a Mac with Apple Silicon; DaVinci Resolve Studio and DaVinci Resolve 21 are not checked. It does not run in Premiere Pro or After Effects. One-time purchase, US$65; the license is sold separately from the Premiere Pro / After Effects version
@@ -54,9 +54,9 @@
 - Processing: everything runs on your computer. Footage is never uploaded, and it works offline once installed
 - Support: send a message through BOOTH in English or Japanese
 
-- [DaVinci Resolve用の肌補正プラグインと無料体験版](https://fukudafukuo.github.io/totonoe/resolve/): Mac用、Premiere Pro／After Effects版とは別売り。
+- [DaVinci Resolve用の肌補正プラグインと無料体験版](https://totonoe.designstudiomarimo.com/resolve/): Mac用、Premiere Pro／After Effects版とは別売り。
 
-- [Fix skin retouch flicker in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/skin-retouch-flicker/): how to inspect and refine a changing skin selection with Lumetri Color or Totonoe.
+- [Fix skin retouch flicker in Premiere Pro](https://totonoe.designstudiomarimo.com/en/skin-retouch-flicker/): how to inspect and refine a changing skin selection with Lumetri Color or Totonoe.
 
-- [DaVinci Resolve version (English page)](https://fukudafukuo.github.io/totonoe/en/resolve/): separate product for DaVinci Resolve, Mac only, Windows not supported. Checked on the free version of DaVinci Resolve 20.3.2 on a Mac with Apple Silicon; DaVinci Resolve Studio, DaVinci Resolve 21 and Intel Macs are not checked. Parameters, requirements, a comparison with Resolve Studio's face tools (from the official manual and site, checked Nov 14, 2026), price (US$65, one-time purchase), FAQ
-- [How to smooth skin in DaVinci Resolve (free version and Studio)](https://fukudafukuo.github.io/totonoe/en/davinci-resolve-skin-retouch/): Qualifier, tracked Power Window, Mid-tone Detail and the Blur palette, the Studio-only face effects (Face Refinement, Beauty, Blemish Removal) as described in the DaVinci Resolve 21 manual, and a plugin option for Mac
+- [DaVinci Resolve version (English page)](https://totonoe.designstudiomarimo.com/en/resolve/): separate product for DaVinci Resolve, Mac only, Windows not supported. Checked on the free version of DaVinci Resolve 20.3.2 on a Mac with Apple Silicon; DaVinci Resolve Studio, DaVinci Resolve 21 and Intel Macs are not checked. Parameters, requirements, a comparison with Resolve Studio's face tools (from the official manual and site, checked Nov 14, 2026), price (US$65, one-time purchase), FAQ
+- [How to smooth skin in DaVinci Resolve (free version and Studio)](https://totonoe.designstudiomarimo.com/en/davinci-resolve-skin-retouch/): Qualifier, tracked Power Window, Mid-tone Detail and the Blur palette, the Studio-only face effects (Face Refinement, Beauty, Blemish Removal) as described in the DaVinci Resolve 21 manual, and a plugin option for Mac
