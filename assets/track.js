@@ -10,7 +10,11 @@
       if (href.indexOf('items/9047647') !== -1) return 'click_booth_win';
       return 'click_booth_shop';
     }
-    if (href.indexOf('gumroad.com') !== -1) return 'click_gumroad';
+    if (href.indexOf('gumroad.com') !== -1) {
+      if (href.indexOf('gumroad.com/l/totonoe-skin-retouch-resolve') !== -1) return 'click_gumroad_resolve_buy';
+      if (href.indexOf('gumroad.com/l/totonoe-skin-retouch') !== -1) return 'click_gumroad_buy';
+      return 'click_gumroad';
+    }
     return null;
   }
   document.addEventListener('click', function (e) {

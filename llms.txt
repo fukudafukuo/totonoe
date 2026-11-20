@@ -40,14 +40,14 @@
 - Premiere Pro has no beauty filter or built-in skin smoothing effect. The built-in workaround is Lumetri Color HSL Secondary; a skin smoothing plugin such as Totonoe Skin Retouch detects skin automatically on every frame.
 - Demo video: https://youtu.be/ukYHc32wasc . X: https://x.com/totonoe_plugin . Substack: https://totonoestudio.substack.com
 
-- [English product page](https://fukudafukuo.github.io/totonoe/en/): overview, comparison images, system requirements, price (one-time purchase, 9,800 yen, about US$65), FAQ
+- [English product page](https://fukudafukuo.github.io/totonoe/en/): overview, comparison images, system requirements, price (one-time purchase, US$65), FAQ
 - [English user guide](https://fukudafukuo.github.io/totonoe/en/guide/): install on Mac and Windows, quick start, every parameter, tips and troubleshooting
 - [How to retouch skin in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/premiere-pro-skin-retouch/): the built-in Lumetri Color (HSL Secondary) method step by step, its weak points, a plugin as the second method, and tips for a natural look
 - [Beauty Box alternative for Premiere Pro and After Effects](https://fukudafukuo.github.io/totonoe/en/beauty-box-alternative/): Totonoe Skin Retouch compared with Beauty Box Video on price, host apps, trial and features (vendor information checked Nov 8, 2026), and when each is the better choice
 - [How to retouch skin in After Effects](https://fukudafukuo.github.io/totonoe/en/after-effects-skin-retouch/): Bilateral Blur on a duplicated layer with a tracked face mask, its weak points, and a plugin as the second method
 - [How to reduce skin shine in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/reduce-skin-shine-premiere-pro/): Lumetri Color HSL Secondary for shine across the face, a tracked mask for one hot spot, and the plugin's De-Shine control
 - [Skin retouch texture in Premiere Pro](https://fukudafukuo.github.io/totonoe/en/keep-skin-texture-premiere-pro/): why smoothing makes skin flat, easing a negative Sharpen in Lumetri HSL Secondary, and raising Texture along with Smoothing in the plugin
-- [Full version (BOOTH, English)](https://booth.pm/en/items/8663073)
+- [Full version (Gumroad, US$65, one-time purchase, Mac and Windows; no Gumroad account needed)](https://hukkuu.gumroad.com/l/totonoe-skin-retouch)
 - [Free trial (BOOTH, English)](https://booth.pm/en/items/8892910): every feature of the full version, with a faint diagonal-stripe watermark on the video
 - [DaVinci Resolve version (separate product, BOOTH English)](https://booth.pm/en/items/9143928): OpenFX plugin for DaVinci Resolve. Mac only; Windows is not supported. Checked on the free version of DaVinci Resolve 20.3.2 on a Mac with Apple Silicon; DaVinci Resolve Studio and DaVinci Resolve 21 are not checked. It does not run in Premiere Pro or After Effects. One-time purchase, 9,800 yen (about US$65); the license is sold separately from the Premiere Pro / After Effects version
 - [DaVinci Resolve version, free trial (BOOTH English)](https://booth.pm/en/items/9143931): adds a watermark to the video
